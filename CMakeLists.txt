@@ -65,7 +65,7 @@ add_custom_target(run-benchmarks
 )
 
 add_custom_target(test-all
-  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-tests.sh ${CMAKE_BINARY_DIR} ${SUBMIT_TO_CDASH}
+  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-tests ${CMAKE_BINARY_DIR} ${SUBMIT_TO_CDASH}
   DEPENDS build_all_forks
   COMMENT "Running all tests for main project and forks"
   VERBATIM
