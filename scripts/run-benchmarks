@@ -15,7 +15,7 @@ fi
 BUILD_DIR="$1"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-FORKS_DIR="$PROJECT_ROOT/third_party/forks"
+FORKS_DIR="$PROJECT_ROOT/forks"
 RESULTS_DIR="$BUILD_DIR/benchmark_results"
 COMBINED_JSON="$RESULTS_DIR/combined.json"
 

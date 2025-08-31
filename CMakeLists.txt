@@ -40,7 +40,7 @@ foreach(FORK_PATH ${FORK_DIRS})
       DEPENDS ep_benchmark
       SOURCE_DIR ${FORK_PATH}
       BINARY_DIR ${CMAKE_BINARY_DIR}/fork_builds/${FORK_NAME}
-      PATCH_COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/patch-fork.sh <SOURCE_DIR>
+      PATCH_COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/patch-forks <SOURCE_DIR>
       CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -Dalg_BUILD_TESTS=${alg_BUILD_TESTS}
