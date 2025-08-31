@@ -1,0 +1,63 @@
+#!/bin/bash
+#
+# This script runs tests for the toplevel project and all pre-built student forks.
+# It is intended to be called from a CMake target, e.g., `make test-all`
+#
+set -e
+
+# --- Configuration ---
+if [ -z "$1" ]; then
+    echo "Error: Build directory not provided." >&2
+    echo "Usage: $0 <path-to-build-dir>" >&2
+    exit 1
+fi
+
+BUILD_DIR="$1"
+SUBMIT_TO_CDASH_OPTION="$2"
+
+if [ "$SUBMIT_TO_CDASH_OPTION" = "ON" ]; then
+    SUBMIT_FLAG="SUBMIT"
+else
+    SUBMIT_FLAG="NO_SUBMIT"
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+FORKS_DIR="$PROJECT_ROOT/third_party/forks"
+
+echo "--- Running tests for all projects ---"
+
+# 1. Run tests for the toplevel project
+echo "--- Running tests for: toplevel ---"
+TOPLEVEL_BUILD_DIR="$BUILD_DIR/alg_build"
+if [ -d "$TOPLEVEL_BUILD_DIR" ]; then
+    echo "  -> Running tests in $TOPLEVEL_BUILD_DIR..."
+    if [ -n "$TRAVIS_BUILD_NUMBER" ]; then
+        TOPLEVEL_BUILD_NAME="toplevel-${TRAVIS_BRANCH}-${TRAVIS_BUILD_NUMBER}"
+    else
+        TOPLEVEL_BUILD_NAME="toplevel"
+    fi
+    ctest -S "$SCRIPT_DIR/cmake/cdash_submit.cmake" -V -D "$TOPLEVEL_BUILD_DIR" -D "${TOPLEVEL_BUILD_NAME}" -D "${SUBMIT_FLAG}"
+else
+    echo "  -> WARNING: Toplevel project build directory not found at $TOPLEVEL_BUILD_DIR. Skipping tests." >&2
+fi
+echo ""
+
+# 2. Loop through each fork and run its tests
+FORKS=$(find "$FORKS_DIR" -mindepth 1 -maxdepth 1 -type d)
+for FORK_PATH in $FORKS; do
+    FORK_NAME=$(basename "$FORK_PATH")
+    FORK_BUILD_DIR="$BUILD_DIR/fork_builds/$FORK_NAME"
+
+    echo "--- Running tests for fork: $FORK_NAME ---"
+
+    if [ -d "$FORK_BUILD_DIR" ]; then
+        echo "  -> Running tests in $FORK_BUILD_DIR..."
+        ctest -S "$SCRIPT_DIR/cmake/cdash_submit.cmake" -V -D "$FORK_BUILD_DIR" -D "$FORK_NAME" -D "${SUBMIT_FLAG}"
+    else
+        echo "  -> ERROR: Build directory for fork '$FORK_NAME' not found at $FORK_BUILD_DIR. Skipping tests." >&2
+    fi
+    echo ""
+done
+
+echo "--- All tests completed! ---"

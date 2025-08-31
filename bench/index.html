@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Consolidated Benchmark Results</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
+    <style>
+        body { font-family: sans-serif; margin: 8px; }
+        main { width: 100%; display: flex; flex-direction: column; }
+        .benchmark-set { margin: 8px 0; width: 100%; display: flex; flex-direction: column; border-top: 1px solid #dbdbdb; padding-top: 20px; }
+        .benchmark-title { font-size: 2.5rem; font-weight: 600; text-align: center; margin-bottom: 1rem; }
+        .benchmark-graphs { display: flex; flex-direction: column; align-items: center; width: 100%; }
+        .benchmark-chart { max-width: 1000px; width: 100%; margin-bottom: 2rem; }
+        button { color: #fff; background-color: #3298dc; border: none; cursor: pointer; padding: 8px 16px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <main id="main"></main>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const main = document.getElementById('main');
+        if (!main) return;
+
+        const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#c74a7f', '#75a154', '#d98a26', '#528a9d'];
+        let isLog = true; // Shared state for all charts
+
+        function createChartElements(titleText) {
+            const container = document.createElement('div');
+            container.className = 'benchmark-set';
+
+            const title = document.createElement('h1');
+            title.className = 'benchmark-title';
+            title.textContent = titleText;
+
+            const buttonContainer = document.createElement('div');
+            buttonContainer.style.textAlign = 'center';
+            buttonContainer.style.marginBottom = '10px';
+
+            const toggleButton = document.createElement('button');
+            toggleButton.textContent = 'Switch to Linear Scale';
+
+            buttonContainer.appendChild(toggleButton);
+
+            const graphContainer = document.createElement('div');
+            graphContainer.className = 'benchmark-graphs';
+
+            const chartCanvas = document.createElement('canvas');
+            chartCanvas.className = 'benchmark-chart';
+
+            graphContainer.appendChild(chartCanvas);
+            container.appendChild(title);
+            container.appendChild(buttonContainer);
+            container.appendChild(graphContainer);
+
+            return { container, chartCanvas, toggleButton };
+        }
+
+        function drawChart(canvas, chartData, unit) {
+            const chartOptions = {
+                scales: {
+                    xAxes: [{ scaleLabel: { display: true, labelString: 'Problem Size (N)' }, type: isLog ? 'logarithmic' : 'linear' }],
+                    yAxes: [{ scaleLabel: { display: true, labelString: 'Time (' + unit + ')' }, type: isLog ? 'logarithmic' : 'linear' }]
+                },
+                tooltips: {
+                    callbacks: {
+                        title: (items) => 'Size: ' + items[0].xLabel,
+                        label: (item) => `${item.datasetIndex !== undefined ? chartData.datasets[item.datasetIndex].label : ''}: ${Number(item.yLabel).toPrecision(4)} ${unit}`
+                    }
+                }
+            };
+            return new Chart(canvas, { type: 'line', data: chartData, options: chartOptions });
+        }
+
+        fetch('combined.json') // Assumes combined.json is in the same directory
+            .then(response => response.json())
+            .then(data => {
+                const benches = data.benchmarks;
+                const unit = benches.length > 0 ? (benches[0].time_unit || 'ns') : 'ns';
+
+                // --- 1. Process and Group Data ---
+                const forks = {};
+                benches.forEach(b => {
+                    const parts = b.name.split('/');
+                    const forkName = parts[0];
+                    const problemSize = Number(parts.pop());
+                    if (!forks[forkName]) forks[forkName] = [];
+                    forks[forkName].push({ x: problemSize, y: b.cpu_time });
+                });
+
+                // --- 2. Render Consolidated Chart ---
+                const { container: consolidatedContainer, chartCanvas: consolidatedCanvas, toggleButton: consolidatedToggleButton } = createChartElements('Consolidated: Time vs. Problem Size');
+                main.appendChild(consolidatedContainer);
+
+                let colorIndex = 0;
+                const consolidatedDatasets = Object.keys(forks).map(forkName => {
+                    const color = colors[colorIndex % colors.length];
+                    colorIndex++;
+                    return {
+                        label: forkName,
+                        data: forks[forkName].sort((a, b) => a.x - b.x),
+                        borderColor: color,
+                        backgroundColor: color + '60',
+                        fill: false
+                    };
+                });
+
+                let consolidatedChart = drawChart(consolidatedCanvas, { datasets: consolidatedDatasets }, unit);
+
+                // --- 3. Render Individual Charts ---
+                const individualCharts = [];
+                Object.keys(forks).forEach((forkName, index) => {
+                    const { container, chartCanvas, toggleButton } = createChartElements(`Individual: ${forkName}`);
+                    main.appendChild(container);
+
+                    const color = colors[index % colors.length];
+                    const individualDataset = [{
+                        label: forkName,
+                        data: forks[forkName].sort((a, b) => a.x - b.x),
+                        borderColor: color,
+                        backgroundColor: color + '60',
+                        fill: false
+                    }];
+
+                    const chart = drawChart(chartCanvas, { datasets: individualDataset }, unit);
+                    individualCharts.push(chart);
+                });
+
+                // --- 4. Setup Toggle Button Logic ---
+                function toggleAllCharts() {
+                    isLog = !isLog;
+                    consolidatedToggleButton.textContent = isLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
+                    consolidatedChart.destroy();
+                    consolidatedChart = drawChart(consolidatedCanvas, { datasets: consolidatedDatasets }, unit);
+
+                    individualCharts.forEach((chart, index) => {
+                        const forkName = Object.keys(forks)[index];
+                        const toggleButton = chart.canvas.parentElement.previousElementSibling.querySelector('button');
+                        toggleButton.textContent = isLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
+                        chart.destroy();
+                        const newDataset = [{
+                            label: forkName,
+                            data: forks[forkName].sort((a, b) => a.x - b.x),
+                            borderColor: colors[index % colors.length],
+                            backgroundColor: colors[index % colors.length] + '60',
+                            fill: false
+                        }];
+                        individualCharts[index] = drawChart(chart.canvas, { datasets: newDataset }, unit);
+                    });
+                }
+
+                consolidatedToggleButton.addEventListener('click', toggleAllCharts);
+                document.querySelectorAll('.benchmark-set button').forEach((button, index) => {
+                    if (index > 0) button.addEventListener('click', toggleAllCharts);
+                });
+
+            })
+            .catch(error => console.error('Error loading or processing benchmark data:', error));
+    });
+    </script>
+</body>
+</html>
