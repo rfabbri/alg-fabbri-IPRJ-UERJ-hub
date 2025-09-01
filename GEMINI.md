@@ -7,7 +7,7 @@ all forks lie in third_party/forks
 
 Build all forks
 ```
-cmake --build build --target build_all_forks
+cmake --build build --target build-all-forks
 ```
 
 Generate cohesive benchmark for all forks comparing different implementations of
