@@ -1,5 +1,4 @@
 # This is the superbuild orchestrator for the alg project and its forks.
-
 cmake_minimum_required(VERSION 3.10)
 project(alg-hub)
 
@@ -58,7 +57,7 @@ endforeach()
 
 # --- Custom user-facing targets ---
 add_custom_target(run-benchmarks
-  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-benchmarks.sh ${CMAKE_BINARY_DIR}
+  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-benchmarks ${CMAKE_BINARY_DIR}
   DEPENDS build-all-forks
   COMMENT "Running all benchmarks and collecting results"
   VERBATIM
