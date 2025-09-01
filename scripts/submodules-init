@@ -1,1 +1,6 @@
-git submodule update --init --recursive
+#git submodule update --init --recursive
+
+# populates only 1st level / direct submodules
+# pull in their changes from remore
+git submodule update --init --remote --force
+
