@@ -1,0 +1,2 @@
+# to be run in the toplevel foldder
+for i in forks/*; do ./scripts/patch-forks $i; done

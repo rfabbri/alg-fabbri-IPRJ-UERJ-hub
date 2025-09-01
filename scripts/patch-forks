@@ -10,8 +10,8 @@ sed -i.bak 's/benchmark::benchmark/benchmark/g' "$FORK_DIR/alg/merge/benchmark/C
 
 # Patch 2: For old files, remove subdirectory
 # 
-if ! grep -q alg_BUILD_THIRD_PARTY "$FORK_DIR/CMakeLists.txt"
-  sed -i.bak 's/add_subdirectory(third_party)/#&/' "$FORK_DIR/third_party/CMakeLists.txt"
+if ! grep -q alg_BUILD_THIRD_PARTY "$FORK_DIR/CMakeLists.txt"; then 
+  sed -i.bak 's/add_subdirectory(third_party)/#&/' "$FORK_DIR/CMakeLists.txt"
 fi
 
 # Patch 3: Change GTest::gtest_main to gtest gtest_main
