@@ -3,6 +3,8 @@
 if(DEFINED CMAKE_PREFIX_PATH)
   include_directories(SYSTEM ${CMAKE_PREFIX_PATH}/include)
   link_directories(${CMAKE_PREFIX_PATH}/lib)
+else()
+  error("Improperly called without a CMAKE_PREFIX_PATH")
 endif()
 
 find_package(benchmark REQUIRED)

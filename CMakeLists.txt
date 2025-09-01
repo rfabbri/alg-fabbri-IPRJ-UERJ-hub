@@ -43,10 +43,8 @@ foreach(FORK_PATH ${FORK_DIRS})
       CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -Dalg_BUILD_TESTS=${alg_BUILD_TESTS}
-        -DBUILD_THIRD_PARTY=OFF
+        -Dalg_BUILD_THIRD_PARTY=OFF
         -DCMAKE_PREFIX_PATH=${DEPS_INSTALL_DIR}
-        -DCMAKE_PROJECT_INCLUDE_FILE=${CMAKE_CURRENT_SOURCE_DIR}/cmake/inject.cmake
-      BUILD_COMMAND make -C alg
       INSTALL_COMMAND ""
       TEST_COMMAND ""
     )
