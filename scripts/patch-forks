@@ -8,7 +8,14 @@ echo "Patching fork in $FORK_DIR"
 # Patch 1: Change benchmark::benchmark to benchmark
 sed -i.bak 's/benchmark::benchmark/benchmark/g' "$FORK_DIR/alg/merge/benchmark/CMakeLists.txt"
 
+# Patch 2: For old files, remove subdirectory
+# 
+if ! grep -q alg_BUILD_THIRD_PARTY "$FORK_DIR/CMakeLists.txt"
+  sed -i.bak 's/add_subdirectory(third_party)/#&/' "$FORK_DIR/third_party/CMakeLists.txt"
+fi
+
 # Patch 3: Change GTest::gtest_main to gtest gtest_main
 sed -i.bak 's/GTest::gtest_main/gtest gtest_main/g' "$FORK_DIR/alg/merge/tests/CMakeLists.txt"
+
 
 echo "Patching complete."
