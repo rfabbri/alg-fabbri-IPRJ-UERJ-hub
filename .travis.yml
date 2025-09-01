@@ -19,6 +19,6 @@ script:
 #   - cd build
 #   - cmake .. -DSUBMIT_TO_CDASH=ON -Dalg_BUILD_TESTS=ON # Configure with CDash submission enabled
   - cmake . -DSUBMIT_TO_CDASH=ON -Dalg_BUILD_TESTS=ON # Configure with CDash submission enabled
-  - make build_all_forks # Build all external dependencies and forks
+  - make build-all-forks # Build all external dependencies and forks
   - make alg_project # Build the main project
   - make test-all # Run all tests and submit to CDash
