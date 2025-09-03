@@ -1,0 +1,5 @@
+set -e
+for i in `cat fork-list-final`; do
+  echo doing fork $i
+  git submodule add git@github.com:$i/alg-fabbri-IPRJ-UERJ.git ../forks/$i
+done
