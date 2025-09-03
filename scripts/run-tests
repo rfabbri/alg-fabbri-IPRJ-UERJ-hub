@@ -27,22 +27,6 @@ FORKS_DIR="$PROJECT_ROOT/forks"
 
 echo "--- Running tests for all projects ---"
 
-# 1. Run tests for the toplevel project
-echo "--- Running tests for: toplevel ---"
-TOPLEVEL_BUILD_DIR="$BUILD_DIR/alg_build"
-if [ -d "$TOPLEVEL_BUILD_DIR" ]; then
-    echo "  -> Running tests in $TOPLEVEL_BUILD_DIR..."
-    if [ -n "$TRAVIS_BUILD_NUMBER" ]; then
-        TOPLEVEL_BUILD_NAME="toplevel-${TRAVIS_BRANCH}-${TRAVIS_BUILD_NUMBER}"
-    else
-        TOPLEVEL_BUILD_NAME="toplevel"
-    fi
-    ctest -S "$SCRIPT_DIR/cmake/cdash_submit.cmake" -V -D "$TOPLEVEL_BUILD_DIR" -D "${TOPLEVEL_BUILD_NAME}" -D "${SUBMIT_FLAG}"
-else
-    echo "  -> WARNING: Toplevel project build directory not found at $TOPLEVEL_BUILD_DIR. Skipping tests." >&2
-fi
-echo ""
-
 # 2. Loop through each fork and run its tests
 FORKS=$(find "$FORKS_DIR" -mindepth 1 -maxdepth 1 -type d)
 for FORK_PATH in $FORKS; do
@@ -53,7 +37,8 @@ for FORK_PATH in $FORKS; do
 
     if [ -d "$FORK_BUILD_DIR" ]; then
         echo "  -> Running tests in $FORK_BUILD_DIR..."
-        ctest -S "$SCRIPT_DIR/cmake/cdash_submit.cmake" -V -D "$FORK_BUILD_DIR" -D "$FORK_NAME" -D "${SUBMIT_FLAG}"
+        cp "$PROJECT_ROOT/cmake/CTestConfig.cmake" "$FORK_BUILD_DIR/"
+        (cd "$FORK_BUILD_DIR" && ctest -S "$PROJECT_ROOT/cmake/cdash_submit.cmake" -D FORK_BUILD_DIR="$FORK_BUILD_DIR" -D FORK_NAME="$FORK_NAME" -D SUBMIT_FLAG="${SUBMIT_FLAG}" -D FORK_PATH="$FORK_PATH" -V)
     else
         echo "  -> ERROR: Build directory for fork '$FORK_NAME' not found at $FORK_BUILD_DIR. Skipping tests." >&2
     fi
