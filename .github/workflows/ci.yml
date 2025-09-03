@@ -1,0 +1,42 @@
+name: Superproject CI
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0,12 * * *' # Run at midnight and noon UTC
+
+jobs:
+  build-and-benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout superproject
+        uses: actions/checkout@v4
+
+      - name: Update submodules to latest commit
+        run: |
+          git submodule update --init --remote --force
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Configure and build
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make build-all-forks
+
+      - name: Run benchmarks
+        run: make -C build run-benchmarks
+
+      - name: Run tests and submit to CDash
+        run: make -C build test-all SUBMIT_TO_CDASH=ON
+
+      - name: Deploy benchmark results to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./bench
+          user_name: 'github-actions[bot]'
+          user_email: '41898282+github-actions[bot]@users.noreply.github.com'
