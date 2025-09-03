@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '0 0,12 * * *' # Run at midnight and noon UTC
+    - cron: '0 0,12 * * *'
 
 jobs:
   build-and-benchmark:
@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout superproject
         uses: actions/checkout@v4
+
+      - name: Setup SSH for private submodules
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Update submodules to latest commit
         run: |
