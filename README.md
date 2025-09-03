@@ -38,3 +38,10 @@ make run-benchmarks
    * Finally, it will merge them all into a single build/benchmark_results/combined.json.
    * This should already be read by the first plot in index.html, usualy in gh-pages/index.html
 
+### Testng benchmarks locally
+
+cd bench
+python -m http.server
+
+Open the following URL in your browser:
+http://localhost:8000

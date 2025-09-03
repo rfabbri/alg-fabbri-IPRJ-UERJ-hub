@@ -22,7 +22,6 @@
         if (!main) return;
 
         const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#c74a7f', '#75a154', '#d98a26', '#528a9d'];
-        let isLog = true; // Shared state for all charts
 
         function createChartElements(titleText) {
             const container = document.createElement('div');
@@ -55,7 +54,7 @@
             return { container, chartCanvas, toggleButton };
         }
 
-        function drawChart(canvas, chartData, unit) {
+        function drawChart(canvas, chartData, unit, isLog) {
             const chartOptions = {
                 scales: {
                     xAxes: [{ scaleLabel: { display: true, labelString: 'Problem Size (N)' }, type: isLog ? 'logarithmic' : 'linear' }],
@@ -84,10 +83,11 @@
                     const forkName = parts[0];
                     const problemSize = Number(parts.pop());
                     if (!forks[forkName]) forks[forkName] = [];
-                    forks[forkName].push({ x: problemSize, y: b.cpu_time });
+                    forks[forkName].push({ x: problemSize, y: Number(b.cpu_time) }); // Ensure y is a number
                 });
 
                 // --- 2. Render Consolidated Chart ---
+                let consolidatedIsLog = true;
                 const { container: consolidatedContainer, chartCanvas: consolidatedCanvas, toggleButton: consolidatedToggleButton } = createChartElements('Consolidated: Time vs. Problem Size');
                 main.appendChild(consolidatedContainer);
 
@@ -104,11 +104,19 @@
                     };
                 });
 
-                let consolidatedChart = drawChart(consolidatedCanvas, { datasets: consolidatedDatasets }, unit);
+                let consolidatedChart = drawChart(consolidatedCanvas, { datasets: consolidatedDatasets }, unit, consolidatedIsLog);
+
+                consolidatedToggleButton.addEventListener('click', () => {
+                    consolidatedIsLog = !consolidatedIsLog;
+                    consolidatedToggleButton.textContent = consolidatedIsLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
+                    consolidatedChart.destroy();
+                    consolidatedChart = drawChart(consolidatedCanvas, { datasets: consolidatedDatasets }, unit, consolidatedIsLog);
+                });
+
 
                 // --- 3. Render Individual Charts ---
-                const individualCharts = [];
                 Object.keys(forks).forEach((forkName, index) => {
+                    let isLog = true;
                     const { container, chartCanvas, toggleButton } = createChartElements(`Individual: ${forkName}`);
                     main.appendChild(container);
 
@@ -121,36 +129,14 @@
                         fill: false
                     }];
 
-                    const chart = drawChart(chartCanvas, { datasets: individualDataset }, unit);
-                    individualCharts.push(chart);
-                });
+                    let chart = drawChart(chartCanvas, { datasets: individualDataset }, unit, isLog);
 
-                // --- 4. Setup Toggle Button Logic ---
-                function toggleAllCharts() {
-                    isLog = !isLog;
-                    consolidatedToggleButton.textContent = isLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
-                    consolidatedChart.destroy();
-                    consolidatedChart = drawChart(consolidatedCanvas, { datasets: consolidatedDatasets }, unit);
-
-                    individualCharts.forEach((chart, index) => {
-                        const forkName = Object.keys(forks)[index];
-                        const toggleButton = chart.canvas.parentElement.previousElementSibling.querySelector('button');
+                    toggleButton.addEventListener('click', () => {
+                        isLog = !isLog;
                         toggleButton.textContent = isLog ? 'Switch to Linear Scale' : 'Switch to Log Scale';
                         chart.destroy();
-                        const newDataset = [{
-                            label: forkName,
-                            data: forks[forkName].sort((a, b) => a.x - b.x),
-                            borderColor: colors[index % colors.length],
-                            backgroundColor: colors[index % colors.length] + '60',
-                            fill: false
-                        }];
-                        individualCharts[index] = drawChart(chart.canvas, { datasets: newDataset }, unit);
+                        chart = drawChart(chartCanvas, { datasets: individualDataset }, unit, isLog);
                     });
-                }
-
-                consolidatedToggleButton.addEventListener('click', toggleAllCharts);
-                document.querySelectorAll('.benchmark-set button').forEach((button, index) => {
-                    if (index > 0) button.addEventListener('click', toggleAllCharts);
                 });
 
             })
