@@ -24,26 +24,7 @@ echo "--- Cleaning up old results and creating results directory ---"
 rm -rf "$RESULTS_DIR"
 mkdir -p "$RESULTS_DIR"
 
-# 1. Run benchmark for the toplevel project
-echo "--- Benchmarking fork: toplevel ---"
-TOPLEVEL_EXE="$BUILD_DIR/alg_build/alg/merge/benchmark/bm-sorted_merge_3way-cmd"
-JSON_OUTPUT="$RESULTS_DIR/toplevel.json"
-if [ -f "$TOPLEVEL_EXE" ]; then
-    echo "  -> Running benchmark..."
-    "$TOPLEVEL_EXE" --benchmark_format=json --benchmark_out="$JSON_OUTPUT"
-    if command -v jq &> /dev/null; then
-        jq --arg fork_name "toplevel" '(.benchmarks[] | .name) |= ($fork_name + "/" + .)' "$JSON_OUTPUT" > "$JSON_OUTPUT.tmp" && mv "$JSON_OUTPUT.tmp" "$JSON_OUTPUT"
-        echo "  -> Tagged results with fork name."
-    else 
-      exit 1
-    fi
-else
-    echo "  -> ERROR: Toplevel benchmark executable not found at $TOPLEVEL_EXE" >&2
-    exit 1
-fi
-echo ""
-
-# 2. Loop through each fork, find its benchmark executable, and run it
+# 1. Loop through each fork, find its benchmark executable, and run it
 FORKS=$(find "$FORKS_DIR" -mindepth 1 -maxdepth 1 -type d)
 for FORK_PATH in $FORKS; do
     FORK_NAME=$(basename "$FORK_PATH")
@@ -69,7 +50,7 @@ for FORK_PATH in $FORKS; do
     echo ""
 done
 
-# 3. Merge JSON results
+# 2. Merge JSON results
 if [ -n "$(find "$RESULTS_DIR" -name '*.json' -print -quit)" ]; then
     echo "--- Merging all benchmark JSON files into $COMBINED_JSON ---"
     if command -v jq &> /dev/null; then

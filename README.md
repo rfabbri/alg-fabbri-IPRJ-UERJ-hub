@@ -19,7 +19,7 @@ https://my.cdash.org/index.php?project=alg-fabbri-IPRJ-UERJ
 
 Build all forks
 ```
-cmake --build build --target build-all-forks
+make build-all-forks
 ```
 
 Generate cohesive benchmark for all forks comparing different implementations of
@@ -36,5 +36,5 @@ make run-benchmarks
    * The script will then run the benchmark for the toplevel project and every fork.
    * It will save the individual JSON results (with names prefixed) in build/benchmark_results.
    * Finally, it will merge them all into a single build/benchmark_results/combined.json.
-
+   * This should already be read by the first plot in index.html, usualy in gh-pages/index.html
 
