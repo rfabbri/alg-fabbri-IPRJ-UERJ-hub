@@ -16,7 +16,9 @@ jobs:
       - name: Setup SSH for private submodules
         uses: webfactory/ssh-agent@v0.5.4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: |
+            ${{ secrets.SSH_PRIVATE_KEY }}
+            ${{ secrets.SSH_PRIVATE_KEY_PRIV }}
 
       - name: Update submodules to latest commit
         run: |
