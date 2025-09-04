@@ -37,10 +37,12 @@ endif()
 # --- Build all forks uniformly ---
 add_custom_target(build-all-forks
   COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/build-all-forks ${CMAKE_BINARY_DIR}
-  DEPENDS ep_benchmark
   COMMENT "Building all external fork projects individually"
   VERBATIM
 )
+if(NOT USE_SYSTEM_DEPS)
+  add_dependencies(build-all-forks ep_benchmark)
+endif()
 file(GLOB FORK_DIRS LIST_DIRECTORIES true "${CMAKE_CURRENT_SOURCE_DIR}/forks/*")
 
 foreach(FORK_PATH ${FORK_DIRS})
