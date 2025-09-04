@@ -61,6 +61,9 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Create bench directory
+        run: mkdir bench
+
       - name: Download benchmark artifact
         uses: actions/download-artifact@v4
         with:
