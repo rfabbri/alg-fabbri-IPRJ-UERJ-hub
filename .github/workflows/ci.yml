@@ -6,11 +6,8 @@ on:
   schedule:
     - cron: '0 0,12 * * *'
 
-permissions:
-  contents: write
-
 jobs:
-  build-and-benchmark:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
       - name: Setup SSH for private submodules
@@ -51,6 +48,24 @@ jobs:
 
       - name: Run benchmarks
         run: make -C build run-benchmarks
+
+      - name: Upload benchmark artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: benchmark-results
+          path: bench
+
+  deploy:
+    needs: build_and_test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download benchmark artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: benchmark-results
+          path: bench
 
       - name: Deploy benchmark results to gh-pages
         uses: peaceiris/actions-gh-pages@v3
