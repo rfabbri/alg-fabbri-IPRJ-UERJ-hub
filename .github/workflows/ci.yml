@@ -19,6 +19,13 @@ jobs:
           ssh-private-key: |
             ${{ secrets.SSH_PRIVATE_KEY }}
             ${{ secrets.SSH_PRIVATE_KEY_PRIV }}
+          log-public-keys: true
+
+      - name: Check .gitmodules
+        run: cat .gitmodules
+
+      - name: Test SSH connection
+        run: ssh -T git@github.com
 
       - name: Update submodules to latest commit
         run: |
