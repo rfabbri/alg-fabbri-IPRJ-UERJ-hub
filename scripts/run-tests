@@ -39,7 +39,7 @@ for FORK_PATH in $FORKS; do
     if [ -d "$FORK_BUILD_DIR" ]; then
         echo "  -> Submitting build/test results via CTest script..."
         cp "$PROJECT_ROOT/cmake/CTestConfig.cmake" "$FORK_BUILD_DIR/"
-        if ! (cd "$FORK_BUILD_DIR" && ctest -S "$PROJECT_ROOT/cmake/cdash_submit.cmake" -D SITE_NAME="$SITE_NAME" -D FORK_BUILD_DIR="$FORK_BUILD_DIR" -D FORK_NAME="$FORK_NAME" -D SUBMIT_FLAG="${SUBMIT_FLAG}" -D FORK_PATH="$FORK_PATH>" -V); then
+        if ! (cd "$FORK_BUILD_DIR" && ctest -S "$PROJECT_ROOT/cmake/cdash_submit.cmake" -D SITE_NAME="$SITE_NAME" -D FORK_BUILD_DIR="$FORK_BUILD_DIR" -D FORK_NAME="$FORK_NAME" -D SUBMIT_FLAG="${SUBMIT_FLAG}" -D FORK_PATH="$FORK_PATH" -V); then
             echo "  -> ERROR: CTest run failed for fork '$FORK_NAME'. See logs above for details." >&2
         fi
     else
