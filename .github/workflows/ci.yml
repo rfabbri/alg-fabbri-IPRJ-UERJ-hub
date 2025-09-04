@@ -10,9 +10,6 @@ jobs:
   build-and-benchmark:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout superproject
-        uses: actions/checkout@v4
-
       - name: Setup SSH for private submodules
         uses: webfactory/ssh-agent@v0.5.4
         with:
@@ -23,9 +20,11 @@ jobs:
       - name: Add GitHub to known hosts
         run: ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
-      - name: Update submodules to latest commit
-        run: |
-          git submodule update --init --remote --force
+      - name: Checkout superproject and submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+          persist-credentials: false
 
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y jq
