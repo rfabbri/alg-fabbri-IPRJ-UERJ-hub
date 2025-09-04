@@ -7,26 +7,32 @@ include(ExternalProject)
 # --- User-Facing Options ---
 option(alg_BUILD_TESTS "Build tests for all projects" ON)
 option(SUBMIT_TO_CDASH "Submit test results to CDash." OFF)
+option(USE_SYSTEM_DEPS "Use system-provided dependencies (for CI)" OFF)
 
 # --- Project Configuration ---
 set(DEPS_INSTALL_DIR ${CMAKE_BINARY_DIR}/install)
 
-# --- External Project for googletest ---
-ExternalProject_Add(ep_googletest
-  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/googletest
-  CMAKE_ARGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=${DEPS_INSTALL_DIR}
-  BUILD_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --config Release
-  INSTALL_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --target install --config Release
-)
+if(NOT USE_SYSTEM_DEPS)
+  # --- External Project for googletest ---
+  ExternalProject_Add(ep_googletest
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/googletest
+    CMAKE_ARGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=${DEPS_INSTALL_DIR}
+    BUILD_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --config Release
+    INSTALL_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --target install --config Release
+  )
 
-# --- External Project for benchmark ---
-ExternalProject_Add(ep_benchmark
-  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/benchmark
-  CMAKE_ARGS -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_TESTING=OFF -DCMAKE_INSTALL_PREFIX=${DEPS_INSTALL_DIR} -DCMAKE_PREFIX_PATH=${DEPS_INSTALL_DIR}
-  DEPENDS ep_googletest
-  BUILD_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --config Release
-  INSTALL_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --target install --config Release
-)
+  # --- External Project for benchmark ---
+  ExternalProject_Add(ep_benchmark
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/benchmark
+    CMAKE_ARGS -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_TESTING=OFF -DCMAKE_INSTALL_PREFIX=${DEPS_INSTALL_DIR} -DCMAKE_PREFIX_PATH=${DEPS_INSTALL_DIR}
+    DEPENDS ep_googletest
+    BUILD_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --config Release
+    INSTALL_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --target install --config Release
+  )
+else()
+  find_package(GTest REQUIRED)
+  find_package(benchmark REQUIRED)
+endif()
 
 # --- Build all forks uniformly ---
 add_custom_target(build-all-forks

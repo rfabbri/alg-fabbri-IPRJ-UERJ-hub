@@ -6,15 +6,13 @@ on:
   schedule:
     - cron: '0 0,12 * * *'
 
+permissions:
+  contents: write
+
 jobs:
   build-and-benchmark:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout superproject
-        uses: actions/checkout@v4
-        with:
-          submodules: 'false'
-
       - name: Setup SSH for private submodules
         uses: webfactory/ssh-agent@v0.5.4
         with:
@@ -28,24 +26,31 @@ jobs:
       - name: Verify SSH credentials for private repo
         run: git ls-remote git@github.com:rfabbri/alg-fabbri-IPRJ-UERJ-priv.git HEAD
 
+      - name: Checkout superproject
+        uses: actions/checkout@v4
+        with:
+          submodules: 'false'
+
       - name: Update submodules to latest commit
         run: git submodule update --init --remote --force
 
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq libgtest-dev libbenchmark-dev
 
       - name: Configure and build
         run: |
           mkdir build
           cd build
-          cmake ..
+          cmake .. -D USE_SYSTEM_DEPS=ON -D SUBMIT_TO_CDASH=ON
           make build-all-forks
+
+      - name: Run tests and submit to CDash
+        run: make -C build test-all
 
       - name: Run benchmarks
         run: make -C build run-benchmarks
-
-      - name: Run tests and submit to CDash
-        run: make -C build test-all SUBMIT_TO_CDASH=ON
 
       - name: Deploy benchmark results to gh-pages
         uses: peaceiris/actions-gh-pages@v3
