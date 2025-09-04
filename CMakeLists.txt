@@ -57,14 +57,12 @@ endforeach()
 # --- Custom user-facing targets ---
 add_custom_target(run-benchmarks
   COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-benchmarks ${CMAKE_BINARY_DIR}
-  DEPENDS build-all-forks
   COMMENT "Running all benchmarks and collecting results"
   VERBATIM
 )
 
 add_custom_target(test-all
   COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-tests ${CMAKE_BINARY_DIR} ${SUBMIT_TO_CDASH}
-  DEPENDS build-all-forks
   COMMENT "Running all tests for main project and forks"
   VERBATIM
 )

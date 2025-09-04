@@ -15,10 +15,18 @@ else()
 endif()
 
 # Run tests and submit
-message(STATUS "Running tests for fork: ${FORK_NAME}")
+message(STATUS "Processing fork: ${FORK_NAME}")
 
 ctest_start("Experimental")
-ctest_test()
+ctest_build()
+
+# CTEST_BUILD_RESULT is set by ctest_build(). 0 is success.
+if(CTEST_BUILD_RESULT EQUAL 0)
+  message(STATUS "Build successful for ${FORK_NAME}. Running tests...")
+  ctest_test()
+else()
+  message(STATUS "Build failed for ${FORK_NAME}. Skipping tests.")
+endif()
 
 if(DO_SUBMIT)
   ctest_submit()

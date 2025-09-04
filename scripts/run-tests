@@ -1,9 +1,9 @@
-#!/bin/bash
 #
 # This script runs tests for the toplevel project and all pre-built student forks.
 # It is intended to be called from a CMake target, e.g., `make test-all`
 #
-set -e
+# NOTE: set -e is intentionally omitted to allow the script to continue
+# even if a specific fork fails the ctest process.
 
 # --- Configuration ---
 if [ -z "$1" ]; then
@@ -34,14 +34,16 @@ for FORK_PATH in $FORKS; do
     FORK_NAME=$(basename "$FORK_PATH")
     FORK_BUILD_DIR="$BUILD_DIR/fork_builds/$FORK_NAME"
 
-    echo "--- Running tests for fork: $FORK_NAME on site: $SITE_NAME ---"
+    echo "--- Processing fork: $FORK_NAME on site: $SITE_NAME ---"
 
     if [ -d "$FORK_BUILD_DIR" ]; then
-        echo "  -> Running tests in $FORK_BUILD_DIR..."
+        echo "  -> Submitting build/test results via CTest script..."
         cp "$PROJECT_ROOT/cmake/CTestConfig.cmake" "$FORK_BUILD_DIR/"
-        (cd "$FORK_BUILD_DIR" && ctest -S "$PROJECT_ROOT/cmake/cdash_submit.cmake" -D SITE_NAME="$SITE_NAME" -D FORK_BUILD_DIR="$FORK_BUILD_DIR" -D FORK_NAME="$FORK_NAME" -D SUBMIT_FLAG="${SUBMIT_FLAG}" -D FORK_PATH="$FORK_PATH" -V)
+        if ! (cd "$FORK_BUILD_DIR" && ctest -S "$PROJECT_ROOT/cmake/cdash_submit.cmake" -D SITE_NAME="$SITE_NAME" -D FORK_BUILD_DIR="$FORK_BUILD_DIR" -D FORK_NAME="$FORK_NAME" -D SUBMIT_FLAG="${SUBMIT_FLAG}" -D FORK_PATH="$FORK_PATH>" -V); then
+            echo "  -> ERROR: CTest run failed for fork '$FORK_NAME'. See logs above for details." >&2
+        fi
     else
-        echo "  -> ERROR: Build directory for fork '$FORK_NAME' not found at $FORK_BUILD_DIR. Skipping tests." >&2
+        echo "  -> ERROR: Build directory for fork '$FORK_NAME' not found at $FORK_BUILD_DIR. Skipping." >&2
     fi
     echo ""
 done
