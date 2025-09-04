@@ -60,7 +60,7 @@ endforeach()
 
 # --- Custom user-facing targets ---
 add_custom_target(run-benchmarks
-  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-benchmarks ${CMAKE_BINARY_DIR}
+  COMMAND -bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-benchmarks ${CMAKE_BINARY_DIR}
   COMMENT "Running all benchmarks and collecting results"
   VERBATIM
 )
