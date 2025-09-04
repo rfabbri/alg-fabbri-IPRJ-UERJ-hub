@@ -23,7 +23,7 @@ jobs:
             ${{ secrets.SSH_PRIVATE_KEY_PRIV }}
 
       - name: Undo git URL rewrite
-        run: git config --global --unset url."https://github.com/".insteadOf
+        run: git config --global --unset url."https://github.com/".insteadOf || true
 
       - name: Verify SSH credentials for private repo
         run: git ls-remote git@github.com:rfabbri/alg-fabbri-IPRJ-UERJ-priv.git HEAD
