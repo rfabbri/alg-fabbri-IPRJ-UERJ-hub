@@ -64,88 +64,8 @@ if [ -n "$(find "$RESULTS_DIR" -name '*.json' -print -quit)" ]; then
         cp "$COMBINED_JSON" "$PROJECT_ROOT/bench/combined.json"
         echo "Dashboard ready at: $PROJECT_ROOT/bench/index.html"
     else
-        #!/bin/bash
-#
-# This script runs the benchmarks for all pre-built student forks and the toplevel project.
-# It is intended to be called from a CMake target, e.g., `make run_benchmarks`
-#
-# NOTE: set -e is intentionally omitted to allow the script to continue
-# even if a specific fork fails to build or run.
-
-# --- Configuration ---
-if [ -z "$1" ]; then
-    echo "Error: Build directory not provided." >&2
-    echo "Usage: $0 <path-to-build-dir>" >&2
-    exit 1
-fi
-
-BUILD_DIR="$1"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-FORKS_DIR="$PROJECT_ROOT/forks"
-RESULTS_DIR="$BUILD_DIR/benchmark_results"
-COMBINED_JSON="$RESULTS_DIR/combined.json"
-
-# --- Main execution ---
-echo "--- Cleaning up old results and creating results directory ---"
-rm -rf "$RESULTS_DIR"
-mkdir -p "$RESULTS_DIR"
-
-# 1. Loop through each fork, build it, find its benchmark executable, and run it
-FORKS=$(find "$FORKS_DIR" -mindepth 1 -maxdepth 1 -type d)
-for FORK_PATH in $FORKS; do
-    FORK_NAME=$(basename "$FORK_PATH")
-    JSON_OUTPUT="$RESULTS_DIR/$FORK_NAME.json"
-
-    echo "--- Benchmarking fork: $FORK_NAME ---"
-
-    echo "  -> Building fork..."
-    if ! make -C "$BUILD_DIR" "fork_$FORK_NAME"; then
-        echo "  -> ERROR: Build failed for fork '$FORK_NAME'. Skipping benchmark." >&2
-        continue
-    fi
-
-    BENCHMARK_EXE="$BUILD_DIR/fork_builds/$FORK_NAME/alg/merge/benchmark/bm-sorted_merge_3way-cmd"
-
-    if [ -f "$BENCHMARK_EXE" ]; then
-        echo "  -> Running benchmark..."
-        if ! "$BENCHMARK_EXE" --benchmark_format=json --benchmark_out="$JSON_OUTPUT"; then
-            echo "  -> ERROR: Benchmark run failed for fork '$FORK_NAME' (e.g., segfault). Skipping." >&2
-            continue
-        fi
-
-        if command -v jq &> /dev/null; then
-            jq --arg fork_name "$FORK_NAME" '(.benchmarks[] | .name) |= ($fork_name + "/" + .)' "$JSON_OUTPUT" > "$JSON_OUTPUT.tmp" && mv "$JSON_OUTPUT.tmp" "$JSON_OUTPUT"
-            echo "  -> Tagged results with fork name."
-        else
-           echo "  -> ERROR: jq not found. Cannot tag results." >&2
-        fi
-    else
-        echo "  -> ERROR: Benchmark executable for fork '$FORK_NAME' not found. Skipping." >&2
-    fi
-    echo ""
-done
-
-# 2. Merge JSON results
-if [ -n "$(find "$RESULTS_DIR" -name '*.json' -print -quit)" ]; then
-    echo "--- Merging all benchmark JSON files into $COMBINED_JSON ---"
-    if command -v jq &> /dev/null; then
-        jq -s ".[0].benchmarks = ([.[] | .benchmarks] | flatten) | .[0]" "$RESULTS_DIR"/*.json > "$COMBINED_JSON"
-        echo "--- All benchmarks completed! ---"
-        echo "Individual results are in: $RESULTS_DIR"
-        echo "Combined result is at: $COMBINED_JSON"
-
-        # Copy the combined JSON to the dashboard directory
-        echo "--- Copying combined JSON to dashboard directory... ---"
-        cp "$COMBINED_JSON" "$PROJECT_ROOT/bench/combined.json"
-        echo "Dashboard ready at: $PROJECT_ROOT/bench/index.html"
-    else
         echo "--- ERROR: 
 `jq` not found. Cannot merge JSON results. ---" >&2
-    fi
-else
-    echo "--- No benchmark results were generated. ---" >&2
-fi
         exit 1
     fi
 else
