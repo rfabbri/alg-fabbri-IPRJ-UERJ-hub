@@ -1,0 +1,51 @@
+#!/bin/bash
+#
+# This script performs a full, resilient CTest run for every fork,
+# capturing and submitting configure, build, and test results to CDash.
+#
+# NOTE: set -e is intentionally omitted.
+
+# --- Configuration ---
+if [ -z "$1" ]; then
+    echo "Error: Build directory not provided." >&2
+    echo "Usage: $0 <path-to-build-dir>" >&2
+    exit 1
+fi
+
+BUILD_DIR="$1"
+SUBMIT_TO_CDASH_OPTION="$2"
+
+if [ "$SUBMIT_TO_CDASH_OPTION" = "ON" ]; then
+    SUBMIT_FLAG="SUBMIT"
+else
+    SUBMIT_FLAG="NO_SUBMIT"
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+FORKS_DIR="$PROJECT_ROOT/forks"
+DEPS_INSTALL_DIR="$BUILD_DIR/install"
+
+echo "--- Submitting full reports for all projects ---"
+
+FORKS=$(find "$FORKS_DIR" -mindepth 1 -maxdepth 1 -type d)
+SITE_NAME=$(hostname -s)
+for FORK_PATH in $FORKS; do
+    FORK_NAME=$(basename "$FORK_PATH")
+    FORK_BUILD_DIR="$BUILD_DIR/fork_builds/$FORK_NAME"
+
+    echo "--- Processing fork: $FORK_NAME on site: $SITE_NAME ---"
+
+    if [ -d "$FORK_BUILD_DIR" ]; then
+        echo "  -> Submitting full report via CTest script..."
+        cp "$PROJECT_ROOT/cmake/CTestConfig.cmake" "$FORK_BUILD_DIR/"
+        if ! (cd "$FORK_BUILD_DIR" && ctest -S "$PROJECT_ROOT/cmake/cdash_submit.cmake" -D REPORT_MODE=FullReport -D PROJECT_ROOT="$PROJECT_ROOT" -D DEPS_INSTALL_DIR="$DEPS_INSTALL_DIR" -D SITE_NAME="$SITE_NAME" -D FORK_BUILD_DIR="$FORK_BUILD_DIR" -D FORK_NAME="$FORK_NAME" -D SUBMIT_FLAG="${SUBMIT_FLAG}" -D FORK_PATH="$FORK_PATH" -V); then
+            echo "  -> ERROR: CTest run failed for fork '$FORK_NAME'. See logs above for details." >&2
+        fi
+    else
+        echo "  -> ERROR: Build directory for fork '$FORK_NAME' not found at $FORK_BUILD_DIR. Skipping." >&2
+    fi
+    echo ""
+done
+
+echo "--- All reports attempted. ---"

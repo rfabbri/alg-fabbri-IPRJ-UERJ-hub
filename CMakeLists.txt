@@ -72,3 +72,10 @@ add_custom_target(test-all
   VERBATIM
 )
 set_target_properties(test-all PROPERTIES EXCLUDE_FROM_ALL TRUE)
+
+add_custom_target(submit-all-dashboard
+  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/submit-all-dashboard ${CMAKE_BINARY_DIR} ${SUBMIT_TO_CDASH}
+  COMMENT "Builds, tests, and submits a full report to CDash for all forks"
+  VERBATIM
+)
+set_target_properties(submit-all-dashboard PROPERTIES EXCLUDE_FROM_ALL TRUE)
