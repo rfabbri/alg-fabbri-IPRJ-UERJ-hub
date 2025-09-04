@@ -29,14 +29,19 @@ ExternalProject_Add(ep_benchmark
 )
 
 # --- Build all forks uniformly ---
-add_custom_target(build-all-forks COMMENT "Building all external fork projects")
+add_custom_target(build-all-forks
+  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/build-all-forks ${CMAKE_BINARY_DIR}
+  DEPENDS ep_benchmark
+  COMMENT "Building all external fork projects individually"
+  VERBATIM
+)
 file(GLOB FORK_DIRS LIST_DIRECTORIES true "${CMAKE_CURRENT_SOURCE_DIR}/forks/*")
 
 foreach(FORK_PATH ${FORK_DIRS})
   if(IS_DIRECTORY ${FORK_PATH})
     string(REPLACE "${CMAKE_CURRENT_SOURCE_DIR}/forks/" "" FORK_NAME ${FORK_PATH})
     ExternalProject_Add(fork_${FORK_NAME}
-      DEPENDS ep_benchmark
+      EXCLUDE_FROM_ALL
       SOURCE_DIR ${FORK_PATH}
       BINARY_DIR ${CMAKE_BINARY_DIR}/fork_builds/${FORK_NAME}
       PATCH_COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/patch-forks <SOURCE_DIR>
@@ -49,7 +54,6 @@ foreach(FORK_PATH ${FORK_DIRS})
       INSTALL_COMMAND ""
       TEST_COMMAND ""
     )
-    add_dependencies(build-all-forks fork_${FORK_NAME})
     message(STATUS "Added external project for fork: ${FORK_NAME}")
   endif()
 endforeach()
@@ -60,9 +64,11 @@ add_custom_target(run-benchmarks
   COMMENT "Running all benchmarks and collecting results"
   VERBATIM
 )
+set_target_properties(run-benchmarks PROPERTIES EXCLUDE_FROM_ALL TRUE)
 
 add_custom_target(test-all
   COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run-tests ${CMAKE_BINARY_DIR} ${SUBMIT_TO_CDASH}
   COMMENT "Running all tests for main project and forks"
   VERBATIM
 )
+set_target_properties(test-all PROPERTIES EXCLUDE_FROM_ALL TRUE)

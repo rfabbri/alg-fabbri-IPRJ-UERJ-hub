@@ -1,0 +1,35 @@
+#!/bin/bash
+#
+# This script builds all fork projects individually, allowing the process
+# to continue even if some forks fail to configure or build.
+#
+# NOTE: set -e is intentionally omitted.
+
+# --- Configuration ---
+if [ -z "$1" ]; then
+    echo "Error: Build directory not provided." >&2
+    echo "Usage: $0 <path-to-build-dir>" >&2
+    exit 1
+fi
+
+BUILD_DIR="$1"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+FORKS_DIR="$PROJECT_ROOT/forks"
+
+echo "--- Building all forks individually ---"
+
+FORKS=$(find "$FORKS_DIR" -mindepth 1 -maxdepth 1 -type d)
+for FORK_PATH in $FORKS; do
+    FORK_NAME=$(basename "$FORK_PATH")
+    echo "--- Building fork: $FORK_NAME ---"
+
+    if ! make -C "$BUILD_DIR" "fork_$FORK_NAME"; then
+        echo "  -> ERROR: Build failed for fork '$FORK_NAME'. See logs above for details." >&2
+    else
+        echo "  -> Build successful for fork '$FORK_NAME'."
+    fi
+    echo ""
+done
+
+echo "--- All fork builds attempted. ---"
