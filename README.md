@@ -2,7 +2,7 @@
 
 all forks lie in forks
 
-## Running tests of all forks
+## Running tests of all forks --------------------------------------------------
 ```
 make test-all
 ```
@@ -13,9 +13,7 @@ Run the test above.
 The results will show up at:
 https://my.cdash.org/index.php?project=alg-fabbri-IPRJ-UERJ
 
-
-
-## Benchmarking multiple forks
+## Benchmarking multiple forks -------------------------------------------------
 
 Build all forks
 ```
