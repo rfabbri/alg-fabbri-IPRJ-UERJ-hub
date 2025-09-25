@@ -1,6 +1,6 @@
 # Superbuiild for algorithms and data structure projects
 
-all forks lie in forks
+all forks lie in forks/
 
 ## Running tests of all forks --------
 ```
