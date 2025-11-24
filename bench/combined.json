@@ -1,16 +1,16 @@
 {
   "context": {
-    "date": "2025-11-24T01:01:45+00:00",
+    "date": "2025-11-24T12:26:34+00:00",
     "host_name": "runnervmg1sw1",
     "executable": "/home/runner/work/alg-fabbri-IPRJ-UERJ-hub/alg-fabbri-IPRJ-UERJ-hub/build/fork_builds/ArthurMacedo32/alg/merge/benchmark/bm-sorted_merge_3way-cmd",
     "num_cpus": 4,
-    "mhz_per_cpu": 3287,
+    "mhz_per_cpu": 3441,
     "cpu_scaling_enabled": false,
     "caches": [
       {
         "type": "Data",
         "level": 1,
-        "size": 32768,
+        "size": 49152,
         "num_sharing": 2
       },
       {
@@ -22,20 +22,20 @@
       {
         "type": "Unified",
         "level": 2,
-        "size": 524288,
+        "size": 1310720,
         "num_sharing": 2
       },
       {
         "type": "Unified",
         "level": 3,
-        "size": 33554432,
+        "size": 50331648,
         "num_sharing": 4
       }
     ],
     "load_avg": [
-      0.981445,
-      0.728516,
-      0.344238
+      1.10303,
+      0.737793,
+      0.333008
     ],
     "library_build_type": "debug"
   },
@@ -49,9 +49,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 173002048,
-      "real_time": 4.0461211649934548,
-      "cpu_time": 4.0458061860631842,
+      "iterations": 206027413,
+      "real_time": 3.4137941245710901,
+      "cpu_time": 3.4136383152080829,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -64,11 +64,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 67514535,
-      "real_time": 11.717180781886581,
-      "cpu_time": 11.716179960359650,
+      "iterations": 79168179,
+      "real_time": 8.9936850637929506,
+      "cpu_time": 8.9931023675560375,
       "time_unit": "ns",
-      "items_per_second": 256056155.68813005
+      "items_per_second": 333588997.14329386
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -79,11 +79,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 47898409,
-      "real_time": 19.100888653733520,
-      "cpu_time": 19.098409030663209,
+      "iterations": 43895870,
+      "real_time": 17.957096761039011,
+      "cpu_time": 17.956460846999953,
       "time_unit": "ns",
-      "items_per_second": 314162294.37576586
+      "items_per_second": 334141568.93853837
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -94,11 +94,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 8743385,
-      "real_time": 88.491637277783084,
-      "cpu_time": 88.482562074070884,
+      "iterations": 9018993,
+      "real_time": 78.626235212738976,
+      "cpu_time": 78.616710756954831,
       "time_unit": "ns",
-      "items_per_second": 339049856.79422665
+      "items_per_second": 381598259.59579527
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -109,11 +109,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1888734,
-      "real_time": 377.88056126484400,
-      "cpu_time": 377.82888273309010,
+      "iterations": 1908267,
+      "real_time": 360.56912161662956,
+      "cpu_time": 360.54353347828169,
       "time_unit": "ns",
-      "items_per_second": 397005117.54143631
+      "items_per_second": 416038525.37001789
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -124,11 +124,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 842823,
-      "real_time": 821.21522431164612,
-      "cpu_time": 821.01918196347287,
+      "iterations": 965101,
+      "real_time": 724.01847993111039,
+      "cpu_time": 723.94793083832678,
       "time_unit": "ns",
-      "items_per_second": 365399501.72972572
+      "items_per_second": 414394443.60674125
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -139,11 +139,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 152660,
-      "real_time": 4338.8851827589069,
-      "cpu_time": 4338.5624852613664,
+      "iterations": 193677,
+      "real_time": 3587.0018381118780,
+      "cpu_time": 3586.6017906101379,
       "time_unit": "ns",
-      "items_per_second": 345736636.29270881
+      "items_per_second": 418223178.25387198
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -154,11 +154,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 82803,
-      "real_time": 8461.7035856192360,
-      "cpu_time": 8460.1349709551523,
+      "iterations": 96799,
+      "real_time": 7213.3996425584919,
+      "cpu_time": 7212.7658446884743,
       "time_unit": "ns",
-      "items_per_second": 354604271.71663654
+      "items_per_second": 415929210.04211146
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -169,11 +169,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3357,
-      "real_time": 206717.05361930025,
-      "cpu_time": 206701.97944593377,
+      "iterations": 3209,
+      "real_time": 217907.46369585468,
+      "cpu_time": 217891.19756933587,
       "time_unit": "ns",
-      "items_per_second": 145136491.09899783
+      "items_per_second": 137683395.81709629
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -184,11 +184,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318,
-      "real_time": 2198733.1446539843,
-      "cpu_time": 2198382.5723270425,
+      "iterations": 315,
+      "real_time": 2219370.0476191584,
+      "cpu_time": 2219220.6952380915,
       "time_unit": "ns",
-      "items_per_second": 136463963.90526447
+      "items_per_second": 135182589.38542125
     },
     {
       "name": "ArthurMacedo32/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -199,11 +199,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 35,
-      "real_time": 19949044.599999458,
-      "cpu_time": 19945265.228571378,
+      "iterations": 32,
+      "real_time": 21584277.812500831,
+      "cpu_time": 21563822.374999985,
       "time_unit": "ns",
-      "items_per_second": 150411637.32947168
+      "items_per_second": 139121902.77907544
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -214,9 +214,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 219362032,
-      "real_time": 3.1936023960608257,
-      "cpu_time": 3.1933531140885858,
+      "iterations": 271776782,
+      "real_time": 2.5878003515398329,
+      "cpu_time": 2.5841487445384503,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -229,11 +229,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 65788125,
-      "real_time": 9.6700453919312750,
-      "cpu_time": 9.6688949411462932,
+      "iterations": 79614135,
+      "real_time": 8.5789233909277378,
+      "cpu_time": 8.5781673693999192,
       "time_unit": "ns",
-      "items_per_second": 310273306.12864596
+      "items_per_second": 349725048.58107746
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -244,11 +244,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 49091883,
-      "real_time": 17.305439292276027,
-      "cpu_time": 17.304576501985064,
+      "iterations": 51175838,
+      "real_time": 15.337932150715027,
+      "cpu_time": 15.337480980770659,
       "time_unit": "ns",
-      "items_per_second": 346729086.33804017
+      "items_per_second": 391198529.11455864
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -259,11 +259,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 6222134,
-      "real_time": 109.93494980982564,
-      "cpu_time": 109.92734614844360,
+      "iterations": 6817035,
+      "real_time": 101.29308210974031,
+      "cpu_time": 101.28985695393968,
       "time_unit": "ns",
-      "items_per_second": 272907525.29846960
+      "items_per_second": 296179705.47280109
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -274,11 +274,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1205023,
-      "real_time": 573.82710122547383,
-      "cpu_time": 573.78813018506719,
+      "iterations": 1283403,
+      "real_time": 538.55643628698169,
+      "cpu_time": 538.53559014588564,
       "time_unit": "ns",
-      "items_per_second": 261420535.05292907
+      "items_per_second": 278533123.42711836
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -289,11 +289,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 601285,
-      "real_time": 1168.2454060885698,
-      "cpu_time": 1168.2121024139981,
+      "iterations": 641570,
+      "real_time": 1091.0571831600305,
+      "cpu_time": 1091.0278254905929,
       "time_unit": "ns",
-      "items_per_second": 256802681.10566467
+      "items_per_second": 274970072.24825048
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -304,11 +304,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 118945,
-      "real_time": 5880.6176552187399,
-      "cpu_time": 5879.7783345243588,
+      "iterations": 127634,
+      "real_time": 5497.8260181456499,
+      "cpu_time": 5497.5863092906275,
       "time_unit": "ns",
-      "items_per_second": 255111658.06922236
+      "items_per_second": 272847012.41799152
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -319,11 +319,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 59335,
-      "real_time": 11829.831751917007,
-      "cpu_time": 11829.386904862225,
+      "iterations": 63551,
+      "real_time": 11011.823307265831,
+      "cpu_time": 11011.367106733167,
       "time_unit": "ns",
-      "items_per_second": 253605704.51600596
+      "items_per_second": 272445734.56874192
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -334,11 +334,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3848,
-      "real_time": 181224.00415801088,
-      "cpu_time": 181202.27520790021,
+      "iterations": 3987,
+      "real_time": 175071.36192625304,
+      "cpu_time": 175060.20993227998,
       "time_unit": "ns",
-      "items_per_second": 165560835.06997839
+      "items_per_second": 171369610.55630606
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -349,11 +349,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 368,
-      "real_time": 1883376.5489130474,
-      "cpu_time": 1883191.7527173874,
+      "iterations": 383,
+      "real_time": 1830499.8459531125,
+      "cpu_time": 1830268.7571801574,
       "time_unit": "ns",
-      "items_per_second": 159304011.16461417
+      "items_per_second": 163910354.05215648
     },
     {
       "name": "Bruno-Grosso/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -364,11 +364,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 51,
-      "real_time": 13641928.196077559,
-      "cpu_time": 13639866.999999985,
+      "iterations": 50,
+      "real_time": 13637818.779999407,
+      "cpu_time": 13636128.400000019,
       "time_unit": "ns",
-      "items_per_second": 219943493.58391860
+      "items_per_second": 220003795.21213630
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -379,9 +379,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321396465,
-      "real_time": 2.1790739079845234,
-      "cpu_time": 2.1788683238939792,
+      "iterations": 404115386,
+      "real_time": 1.7289480534650956,
+      "cpu_time": 1.7289132539982033,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -394,11 +394,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318105769,
-      "real_time": 2.1771323801424955,
-      "cpu_time": 2.1770300305367938,
+      "iterations": 401949469,
+      "real_time": 1.7326305685454331,
+      "cpu_time": 1.7325238810055497,
       "time_unit": "ns",
-      "items_per_second": 1378024169.5886416
+      "items_per_second": 1731577863.3070340
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -409,11 +409,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321362332,
-      "real_time": 2.1788294404087400,
-      "cpu_time": 2.1786848995108734,
+      "iterations": 404661789,
+      "real_time": 1.7324681575012830,
+      "cpu_time": 1.7323659610470410,
       "time_unit": "ns",
-      "items_per_second": 2753954920.8547926
+      "items_per_second": 3463471422.8474011
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -424,11 +424,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321055198,
-      "real_time": 2.1769230971928768,
-      "cpu_time": 2.1767640809229318,
+      "iterations": 405092665,
+      "real_time": 1.7286397718408413,
+      "cpu_time": 1.7284629332895962,
       "time_unit": "ns",
-      "items_per_second": 13781925318.833920
+      "items_per_second": 17356461294.141987
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -439,11 +439,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321537078,
-      "real_time": 2.1756978832779450,
-      "cpu_time": 2.1755766686416167,
+      "iterations": 404985473,
+      "real_time": 1.7293261158531248,
+      "cpu_time": 1.7292046991522576,
       "time_unit": "ns",
-      "items_per_second": 68947236915.193054
+      "items_per_second": 86745080020.623062
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -454,11 +454,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321120120,
-      "real_time": 2.1759620792368186,
-      "cpu_time": 2.1758602793247568,
+      "iterations": 405159993,
+      "real_time": 1.7285690297658942,
+      "cpu_time": 1.7284269180052028,
       "time_unit": "ns",
-      "items_per_second": 137876500090.85150
+      "items_per_second": 173568229512.55203
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -469,11 +469,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321758536,
-      "real_time": 2.1764662398886068,
-      "cpu_time": 2.1762010285874758,
+      "iterations": 404832169,
+      "real_time": 1.7286297942396323,
+      "cpu_time": 1.7284200851143330,
       "time_unit": "ns",
-      "items_per_second": 689274557035.57727
+      "items_per_second": 867844578362.89075
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -484,11 +484,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321826681,
-      "real_time": 2.1770230821850456,
-      "cpu_time": 2.1769708615302763,
+      "iterations": 405257848,
+      "real_time": 1.7288361704965436,
+      "cpu_time": 1.7287606062597445,
       "time_unit": "ns",
-      "items_per_second": 1378061623613.6414
+      "items_per_second": 1735347270835.0535
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -499,11 +499,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321808777,
-      "real_time": 2.1779837595915161,
-      "cpu_time": 2.1775886678193350,
+      "iterations": 405151600,
+      "real_time": 1.7278747732947273,
+      "cpu_time": 1.7277820795968719,
       "time_unit": "ns",
-      "items_per_second": 13776706520998.926
+      "items_per_second": 17363300820320.832
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -514,11 +514,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318750999,
-      "real_time": 2.1778146521198005,
-      "cpu_time": 2.1775968802532293,
+      "iterations": 401274634,
+      "real_time": 1.7283167417953376,
+      "cpu_time": 1.7281770569130974,
       "time_unit": "ns",
-      "items_per_second": 137766545645084.44
+      "items_per_second": 173593324133040.91
     },
     {
       "name": "Cam-18/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -529,11 +529,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318640521,
-      "real_time": 2.1780510395287314,
-      "cpu_time": 2.1777406552759198,
+      "iterations": 400037841,
+      "real_time": 1.7283275058970939,
+      "cpu_time": 1.7281948784440126,
       "time_unit": "ns",
-      "items_per_second": 1377574502607566.0
+      "items_per_second": 1735915339999770.5
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -544,9 +544,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 222103221,
-      "real_time": 3.1756625942855283,
-      "cpu_time": 3.1752981961481774,
+      "iterations": 263929141,
+      "real_time": 2.6344715114272903,
+      "cpu_time": 2.6344054444522289,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -559,11 +559,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 150089968,
-      "real_time": 4.6713761042308093,
-      "cpu_time": 4.6710607467115999,
+      "iterations": 161158396,
+      "real_time": 4.3666772037121220,
+      "cpu_time": 4.3665735355171931,
       "time_unit": "ns",
-      "items_per_second": 642252405.32613134
+      "items_per_second": 687037553.72452903
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -574,11 +574,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 97829254,
-      "real_time": 9.0303570749908424,
-      "cpu_time": 9.0298489958841994,
+      "iterations": 102607625,
+      "real_time": 6.8544607381761669,
+      "cpu_time": 6.8541910408705045,
       "time_unit": "ns",
-      "items_per_second": 664462938.71966159
+      "items_per_second": 875376826.26919913
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -589,11 +589,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 22367392,
-      "real_time": 28.401747552865753,
-      "cpu_time": 28.399461322983043,
+      "iterations": 27117209,
+      "real_time": 25.811425467865185,
+      "cpu_time": 25.810420570937090,
       "time_unit": "ns",
-      "items_per_second": 1056358064.6412358
+      "items_per_second": 1162321238.3365979
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -604,11 +604,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 5385072,
-      "real_time": 133.40696930329051,
-      "cpu_time": 133.39962121212108,
+      "iterations": 6046425,
+      "real_time": 124.10665360109095,
+      "cpu_time": 124.10313896227935,
       "time_unit": "ns",
-      "items_per_second": 1124440973.9476123
+      "items_per_second": 1208672087.2192597
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -619,11 +619,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2519861,
-      "real_time": 280.67687027181324,
-      "cpu_time": 280.66977345178958,
+      "iterations": 2905506,
+      "real_time": 244.03989253507405,
+      "cpu_time": 244.03300595490097,
       "time_unit": "ns",
-      "items_per_second": 1068871778.7828720
+      "items_per_second": 1229341903.2646844
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -634,11 +634,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 456705,
-      "real_time": 1531.2154716940499,
-      "cpu_time": 1531.0192772139562,
+      "iterations": 588943,
+      "real_time": 1262.2264905092916,
+      "cpu_time": 1262.1297935453861,
       "time_unit": "ns",
-      "items_per_second": 979739460.06061852
+      "items_per_second": 1188467309.5200651
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -649,11 +649,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 224101,
-      "real_time": 3124.7604919208707,
-      "cpu_time": 3124.5879848818190,
+      "iterations": 285805,
+      "real_time": 2449.2958275747419,
+      "cpu_time": 2449.1195570406389,
       "time_unit": "ns",
-      "items_per_second": 960126587.73424459
+      "items_per_second": 1224929992.2397461
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -664,11 +664,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 11175,
-      "real_time": 60861.400984342596,
-      "cpu_time": 60851.489664429530,
+      "iterations": 8148,
+      "real_time": 84796.971158564687,
+      "cpu_time": 84787.669857633678,
       "time_unit": "ns",
-      "items_per_second": 493003542.97713053
+      "items_per_second": 353825031.99312788
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -679,11 +679,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 743,
-      "real_time": 942137.25033645262,
-      "cpu_time": 942102.41049797973,
+      "iterations": 711,
+      "real_time": 984591.45007031679,
+      "cpu_time": 984454.31082981615,
       "time_unit": "ns",
-      "items_per_second": 318436718.40455747
+      "items_per_second": 304737352.15514874
     },
     {
       "name": "GabeeW/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -694,11 +694,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 75,
-      "real_time": 9317526.1066661123,
-      "cpu_time": 9316679.0000000075,
+      "iterations": 71,
+      "real_time": 9879572.6760568600,
+      "cpu_time": 9878589.5915493146,
       "time_unit": "ns",
-      "items_per_second": 322003151.55217838
+      "items_per_second": 303687077.20850801
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -709,9 +709,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 185491204,
-      "real_time": 3.7332376472147759,
-      "cpu_time": 3.7328344852406046,
+      "iterations": 220690062,
+      "real_time": 3.1762164124998962,
+      "cpu_time": 3.1759018627671591,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -724,11 +724,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 69224890,
-      "real_time": 9.4330327429914558,
-      "cpu_time": 9.4318267750226852,
+      "iterations": 86670999,
+      "real_time": 8.1662131527986954,
+      "cpu_time": 8.1658723467581105,
       "time_unit": "ns",
-      "items_per_second": 318071999.36544472
+      "items_per_second": 367382671.75962085
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -739,11 +739,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 51448526,
-      "real_time": 14.273268645247349,
-      "cpu_time": 14.272388892152131,
+      "iterations": 52360225,
+      "real_time": 13.437293327139317,
+      "cpu_time": 13.436918538833632,
       "time_unit": "ns",
-      "items_per_second": 420392132.34297323
+      "items_per_second": 446530949.98377651
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -754,11 +754,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 11279021,
-      "real_time": 63.759170055624452,
-      "cpu_time": 63.749783868653125,
+      "iterations": 10875697,
+      "real_time": 64.961649354519338,
+      "cpu_time": 64.956628986629525,
       "time_unit": "ns",
-      "items_per_second": 470589830.73276764
+      "items_per_second": 461846627.01900846
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -769,11 +769,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2257161,
-      "real_time": 340.29534977788711,
-      "cpu_time": 340.27221319170422,
+      "iterations": 2314870,
+      "real_time": 303.93487409660048,
+      "cpu_time": 303.92142971311557,
       "time_unit": "ns",
-      "items_per_second": 440823535.34842497
+      "items_per_second": 493548612.68450665
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -784,11 +784,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 992792,
-      "real_time": 705.09602514929281,
-      "cpu_time": 704.97215730988944,
+      "iterations": 1159930,
+      "real_time": 621.49167277338609,
+      "cpu_time": 621.46813342184475,
       "time_unit": "ns",
-      "items_per_second": 425548721.16478062
+      "items_per_second": 482727888.79484469
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -799,11 +799,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 195988,
-      "real_time": 3578.5767495971691,
-      "cpu_time": 3578.4988315611190,
+      "iterations": 232627,
+      "real_time": 3001.8476144213932,
+      "cpu_time": 3001.7869765762362,
       "time_unit": "ns",
-      "items_per_second": 419170180.18016946
+      "items_per_second": 499702347.86975551
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -814,11 +814,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 95953,
-      "real_time": 7209.9105603782382,
-      "cpu_time": 7208.7664481569072,
+      "iterations": 115450,
+      "real_time": 5991.5169597227250,
+      "cpu_time": 5991.2254742312698,
       "time_unit": "ns",
-      "items_per_second": 416159966.00458890
+      "items_per_second": 500732281.38437366
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -829,11 +829,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3042,
-      "real_time": 230202.01380670184,
-      "cpu_time": 230192.15976331386,
+      "iterations": 3026,
+      "real_time": 229990.72339722040,
+      "cpu_time": 229983.83278255153,
       "time_unit": "ns",
-      "items_per_second": 130325898.28796226
+      "items_per_second": 130443951.80753785
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -844,11 +844,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 298,
-      "real_time": 2352447.5771811646,
-      "cpu_time": 2352168.7516778549,
+      "iterations": 291,
+      "real_time": 2407999.5635739011,
+      "cpu_time": 2407836.1649484551,
       "time_unit": "ns",
-      "items_per_second": 127541869.51340257
+      "items_per_second": 124593194.65634082
     },
     {
       "name": "GabrielGLima7/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -859,11 +859,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 33,
-      "real_time": 21154287.818183437,
-      "cpu_time": 21153255.757575795,
+      "iterations": 31,
+      "real_time": 22661578.161291581,
+      "cpu_time": 22659248.870967776,
       "time_unit": "ns",
-      "items_per_second": 141822140.02331930
+      "items_per_second": 132396268.60905164
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -874,9 +874,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 317589551,
-      "real_time": 2.1851343024822225,
-      "cpu_time": 2.1848842501748433,
+      "iterations": 405009502,
+      "real_time": 1.7285427737940238,
+      "cpu_time": 1.7284389663529425,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -889,11 +889,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321300467,
-      "real_time": 2.1774012734317019,
-      "cpu_time": 2.1772429979070029,
+      "iterations": 404869181,
+      "real_time": 1.7294202988495861,
+      "cpu_time": 1.7293521904301232,
       "time_unit": "ns",
-      "items_per_second": 1377889377.9352686
+      "items_per_second": 1734753635.8420098
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -904,11 +904,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321632697,
-      "real_time": 2.1781827299728924,
-      "cpu_time": 2.1779517584308281,
+      "iterations": 404904492,
+      "real_time": 1.7289036818094481,
+      "cpu_time": 1.7287726830158259,
       "time_unit": "ns",
-      "items_per_second": 2754881955.8440919
+      "items_per_second": 3470670296.3012247
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -919,11 +919,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318433202,
-      "real_time": 2.1786363156941917,
-      "cpu_time": 2.1783960863478042,
+      "iterations": 404920996,
+      "real_time": 1.7304366133684554,
+      "cpu_time": 1.7303179877587775,
       "time_unit": "ns",
-      "items_per_second": 13771600209.903324
+      "items_per_second": 17337853627.042271
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -934,11 +934,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321505786,
-      "real_time": 2.1776386755292600,
-      "cpu_time": 2.1773528952912833,
+      "iterations": 404780382,
+      "real_time": 1.7297473472911591,
+      "cpu_time": 1.7295294908832803,
       "time_unit": "ns",
-      "items_per_second": 68890991590.930511
+      "items_per_second": 86728789992.123322
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -949,11 +949,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321491881,
-      "real_time": 2.1781755259940860,
-      "cpu_time": 2.1780091329895828,
+      "iterations": 405203843,
+      "real_time": 1.7284614080029597,
+      "cpu_time": 1.7282878138942015,
       "time_unit": "ns",
-      "items_per_second": 137740469245.97302
+      "items_per_second": 173582199439.36069
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -964,11 +964,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 300328243,
-      "real_time": 2.3388671940521162,
-      "cpu_time": 2.3385887387221191,
+      "iterations": 405123608,
+      "real_time": 1.7347104294154296,
+      "cpu_time": 1.7345781808894221,
       "time_unit": "ns",
-      "items_per_second": 641412478886.58215
+      "items_per_second": 864763558383.31848
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -979,11 +979,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321333098,
-      "real_time": 2.1872104286002130,
-      "cpu_time": 2.1868589553137157,
+      "iterations": 405147928,
+      "real_time": 1.7285810801431658,
+      "cpu_time": 1.7284776191672873,
       "time_unit": "ns",
-      "items_per_second": 1371830585008.9153
+      "items_per_second": 1735631382629.8096
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -994,11 +994,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321204018,
-      "real_time": 2.2125281602174445,
-      "cpu_time": 2.2121269105668522,
+      "iterations": 404791239,
+      "real_time": 1.7372718064187893,
+      "cpu_time": 1.7372047866875906,
       "time_unit": "ns",
-      "items_per_second": 13561608900780.732
+      "items_per_second": 17269121193939.605
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -1009,11 +1009,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318793618,
-      "real_time": 2.1761583978759993,
-      "cpu_time": 2.1760400391704229,
+      "iterations": 404489547,
+      "real_time": 1.7289208217783882,
+      "cpu_time": 1.7287994861335707,
       "time_unit": "ns",
-      "items_per_second": 137865110291982.38
+      "items_per_second": 173530824370468.00
     },
     {
       "name": "Jonathan-de-Paula/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -1024,11 +1024,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321593420,
-      "real_time": 2.1773996277660435,
-      "cpu_time": 2.1772448982320611,
+      "iterations": 404917110,
+      "real_time": 1.7284940046124702,
+      "cpu_time": 1.7284316412314624,
       "time_unit": "ns",
-      "items_per_second": 1377888175297148.2
+      "items_per_second": 1735677552085646.0
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -1039,9 +1039,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321326433,
-      "real_time": 2.1798204849209264,
-      "cpu_time": 2.1797128093722686,
+      "iterations": 404458943,
+      "real_time": 1.7290023872706719,
+      "cpu_time": 1.7288235928560001,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -1054,11 +1054,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321431494,
-      "real_time": 2.1780194880342343,
-      "cpu_time": 2.1779598392433819,
+      "iterations": 405207634,
+      "real_time": 1.7273579376838195,
+      "cpu_time": 1.7272474066961929,
       "time_unit": "ns",
-      "items_per_second": 1377435867.2482195
+      "items_per_second": 1736867566.4931378
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -1069,11 +1069,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321655083,
-      "real_time": 2.1768764027272938,
-      "cpu_time": 2.1767770540719225,
+      "iterations": 405059431,
+      "real_time": 1.7272655700737951,
+      "cpu_time": 1.7271613038927116,
       "time_unit": "ns",
-      "items_per_second": 2756368636.2718129
+      "items_per_second": 3473908306.3504701
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -1084,11 +1084,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321727928,
-      "real_time": 2.1812317238434136,
-      "cpu_time": 2.1810323752807688,
+      "iterations": 404569420,
+      "real_time": 1.7272289116661357,
+      "cpu_time": 1.7271500994810727,
       "time_unit": "ns",
-      "items_per_second": 13754954002.522793
+      "items_per_second": 17369654211.879780
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -1099,11 +1099,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318721845,
-      "real_time": 2.1774850669554779,
-      "cpu_time": 2.1772982112349415,
+      "iterations": 401314544,
+      "real_time": 1.7294269903160180,
+      "cpu_time": 1.7292951087264854,
       "time_unit": "ns",
-      "items_per_second": 68892721826.525330
+      "items_per_second": 86740544886.213989
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -1114,11 +1114,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321494735,
-      "real_time": 2.1770321744149239,
-      "cpu_time": 2.1768617268335664,
+      "iterations": 405223875,
+      "real_time": 1.7285602261219553,
+      "cpu_time": 1.7284709939659906,
       "time_unit": "ns",
-      "items_per_second": 137813071129.86728
+      "items_per_second": 173563803527.67599
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -1129,11 +1129,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318515902,
-      "real_time": 2.2468868540196043,
-      "cpu_time": 2.2467801623292276,
+      "iterations": 405204863,
+      "real_time": 1.7279628304953969,
+      "cpu_time": 1.7278708720729261,
       "time_unit": "ns",
-      "items_per_second": 667622059848.06116
+      "items_per_second": 868120427425.48828
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -1144,11 +1144,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320439567,
-      "real_time": 2.1774951686912378,
-      "cpu_time": 2.1773141392367430,
+      "iterations": 405255180,
+      "real_time": 1.7347768978548384,
+      "cpu_time": 1.7346736098475048,
       "time_unit": "ns",
-      "items_per_second": 1377844356924.8345
+      "items_per_second": 1729431970930.6755
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -1159,11 +1159,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320773108,
-      "real_time": 2.1770572270041417,
-      "cpu_time": 2.1769938800480761,
+      "iterations": 404741365,
+      "real_time": 1.7284913811564828,
+      "cpu_time": 1.7284021043907885,
       "time_unit": "ns",
-      "items_per_second": 13780470526328.484
+      "items_per_second": 17357072132571.910
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -1174,11 +1174,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321598928,
-      "real_time": 2.1764549196507952,
-      "cpu_time": 2.1763292942319783,
+      "iterations": 404125001,
+      "real_time": 1.7292589477779636,
+      "cpu_time": 1.7291337266213824,
       "time_unit": "ns",
-      "items_per_second": 137846786694965.36
+      "items_per_second": 173497280968650.69
     },
     {
       "name": "KNUKLES12/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -1189,11 +1189,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321586376,
-      "real_time": 2.1767123990352273,
-      "cpu_time": 2.1766472408022635,
+      "iterations": 404921359,
+      "real_time": 1.7296023003815091,
+      "cpu_time": 1.7294811682186426,
       "time_unit": "ns",
-      "items_per_second": 1378266511800169.8
+      "items_per_second": 1734624264853942.0
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -1204,9 +1204,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 173070081,
-      "real_time": 4.0449033360075264,
-      "cpu_time": 4.0445198381804648,
+      "iterations": 206226369,
+      "real_time": 3.3874029756107360,
+      "cpu_time": 3.3872631729262519,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -1219,11 +1219,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 66772685,
-      "real_time": 12.062326593576504,
-      "cpu_time": 12.061259016317827,
+      "iterations": 78642604,
+      "real_time": 8.5733847775435255,
+      "cpu_time": 8.5732526608605184,
       "time_unit": "ns",
-      "items_per_second": 248730252.45053297
+      "items_per_second": 349925532.19572127
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -1234,11 +1234,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 46889984,
-      "real_time": 19.045998074982968,
-      "cpu_time": 19.043881439584201,
+      "iterations": 42762440,
+      "real_time": 17.775272295032725,
+      "cpu_time": 17.774297654670782,
       "time_unit": "ns",
-      "items_per_second": 315061822.82402420
+      "items_per_second": 337566080.89790273
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -1249,11 +1249,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 8962236,
-      "real_time": 89.064390627517938,
-      "cpu_time": 89.057146676342853,
+      "iterations": 8712245,
+      "real_time": 80.653039486380123,
+      "cpu_time": 80.649490458544264,
       "time_unit": "ns",
-      "items_per_second": 336862353.21492964
+      "items_per_second": 371980031.48477054
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -1264,11 +1264,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1811068,
-      "real_time": 392.65386225144812,
-      "cpu_time": 392.60810582485055,
+      "iterations": 1780911,
+      "real_time": 373.44460391339106,
+      "cpu_time": 373.42124283582939,
       "time_unit": "ns",
-      "items_per_second": 382060374.64472950
+      "items_per_second": 401691127.32010776
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -1279,11 +1279,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 813406,
-      "real_time": 848.42669958175088,
-      "cpu_time": 848.34500974912862,
+      "iterations": 928974,
+      "real_time": 763.38831334351539,
+      "cpu_time": 763.35428548054131,
       "time_unit": "ns",
-      "items_per_second": 353629710.26223814
+      "items_per_second": 393002313.21966857
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -1294,11 +1294,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 160751,
-      "real_time": 4523.7974009493473,
-      "cpu_time": 4523.3068099109796,
+      "iterations": 185608,
+      "real_time": 3736.4304825221957,
+      "cpu_time": 3736.1832464117892,
       "time_unit": "ns",
-      "items_per_second": 331615798.58199376
+      "items_per_second": 401479237.25116855
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -1309,11 +1309,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 80038,
-      "real_time": 8750.4429396036066,
-      "cpu_time": 8749.4277468202636,
+      "iterations": 93166,
+      "real_time": 7504.6987527638803,
+      "cpu_time": 7504.1653070862749,
       "time_unit": "ns",
-      "items_per_second": 342879567.30544657
+      "items_per_second": 399777973.59648561
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -1324,11 +1324,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3339,
-      "real_time": 209823.46720575061,
-      "cpu_time": 209784.95178197045,
+      "iterations": 3176,
+      "real_time": 220850.46914358472,
+      "cpu_time": 220835.89168765722,
       "time_unit": "ns",
-      "items_per_second": 143003584.12351239
+      "items_per_second": 135847482.81058851
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -1339,11 +1339,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 314,
-      "real_time": 2226629.3949044328,
-      "cpu_time": 2226323.1847133748,
+      "iterations": 313,
+      "real_time": 2268843.9552715966,
+      "cpu_time": 2268611.0798722063,
       "time_unit": "ns",
-      "items_per_second": 134751325.44093013
+      "items_per_second": 132239502.24949944
     },
     {
       "name": "MarceloBxD/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -1354,11 +1354,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 35,
-      "real_time": 20219481.171428047,
-      "cpu_time": 20218277.371428531,
+      "iterations": 32,
+      "real_time": 21581376.781250048,
+      "cpu_time": 21580510.593749993,
       "time_unit": "ns",
-      "items_per_second": 148380593.70178846
+      "items_per_second": 139014319.74778396
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -1369,9 +1369,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321747497,
-      "real_time": 2.1779625996592373,
-      "cpu_time": 2.1778371285977713,
+      "iterations": 405065070,
+      "real_time": 1.7276792787885338,
+      "cpu_time": 1.7276725465367826,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -1384,11 +1384,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321687102,
-      "real_time": 2.1770845260685223,
-      "cpu_time": 2.1767704258158291,
+      "iterations": 404600829,
+      "real_time": 1.7270049538133976,
+      "cpu_time": 1.7268985724198804,
       "time_unit": "ns",
-      "items_per_second": 1378188514.7009170
+      "items_per_second": 1737218414.5106678
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -1399,11 +1399,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321685087,
-      "real_time": 2.1771683000026552,
-      "cpu_time": 2.1770156849080173,
+      "iterations": 404787976,
+      "real_time": 1.7274807811979078,
+      "cpu_time": 1.7274303449171626,
       "time_unit": "ns",
-      "items_per_second": 2756066500.3906531
+      "items_per_second": 3473367257.7042317
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -1414,11 +1414,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321522609,
-      "real_time": 2.1775423544164516,
-      "cpu_time": 2.1773017523629266,
+      "iterations": 405292894,
+      "real_time": 1.7279800938231991,
+      "cpu_time": 1.7278282949614212,
       "time_unit": "ns",
-      "items_per_second": 13778521956.105700
+      "items_per_second": 17362836392.646202
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -1429,11 +1429,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321264319,
-      "real_time": 2.1767472471785729,
-      "cpu_time": 2.1765866691221305,
+      "iterations": 405075192,
+      "real_time": 1.7287731582436803,
+      "cpu_time": 1.7286148222081208,
       "time_unit": "ns",
-      "items_per_second": 68915243361.523743
+      "items_per_second": 86774681133.643768
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -1444,11 +1444,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321819789,
-      "real_time": 2.1778671665215379,
-      "cpu_time": 2.1776416334671085,
+      "iterations": 405133758,
+      "real_time": 1.7280803393333108,
+      "cpu_time": 1.7279661548223797,
       "time_unit": "ns",
-      "items_per_second": 137763714373.13046
+      "items_per_second": 173614511582.16550
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -1459,11 +1459,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321518437,
-      "real_time": 2.1766803811627518,
-      "cpu_time": 2.1765764524415125,
+      "iterations": 405167931,
+      "real_time": 1.7290903830195379,
+      "cpu_time": 1.7289906663417545,
       "time_unit": "ns",
-      "items_per_second": 689155668443.17273
+      "items_per_second": 867558182470.55139
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -1474,11 +1474,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320507714,
-      "real_time": 2.3021810638854023,
-      "cpu_time": 2.3020107902925542,
+      "iterations": 405060511,
+      "real_time": 1.7279825803607294,
+      "cpu_time": 1.7278744212120942,
       "time_unit": "ns",
-      "items_per_second": 1303208487401.8945
+      "items_per_second": 1736237288526.7417
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -1489,11 +1489,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321082788,
-      "real_time": 2.1848623352553944,
-      "cpu_time": 2.1847448982534661,
+      "iterations": 405182385,
+      "real_time": 1.7278976750185324,
+      "cpu_time": 1.7278393358585895,
       "time_unit": "ns",
-      "items_per_second": 13731580297536.188
+      "items_per_second": 17362725444083.346
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -1504,11 +1504,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321717066,
-      "real_time": 2.1797016916721592,
-      "cpu_time": 2.1794661586277155,
+      "iterations": 405075836,
+      "real_time": 1.7727473529178057,
+      "cpu_time": 1.7726176068423865,
       "time_unit": "ns",
-      "items_per_second": 137648386423624.38
+      "items_per_second": 169241238968848.09
     },
     {
       "name": "MariluPascal/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -1519,11 +1519,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321874629,
-      "real_time": 2.1757673451173432,
-      "cpu_time": 2.1756589706236191,
+      "iterations": 405121443,
+      "real_time": 1.7279142417548374,
+      "cpu_time": 1.7278359195615349,
       "time_unit": "ns",
-      "items_per_second": 1378892574850596.2
+      "items_per_second": 1736275977386381.0
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -1534,9 +1534,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321335894,
-      "real_time": 2.1840905392287233,
-      "cpu_time": 2.1839788492473859,
+      "iterations": 404934717,
+      "real_time": 1.7283898283287757,
+      "cpu_time": 1.7283113094993041,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -1549,11 +1549,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321622230,
-      "real_time": 2.1779661685698568,
-      "cpu_time": 2.1776999494095914,
+      "iterations": 405229304,
+      "real_time": 1.7282123728150069,
+      "cpu_time": 1.7280325141540107,
       "time_unit": "ns",
-      "items_per_second": 1377600252.4192309
+      "items_per_second": 1736078444.9525847
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -1564,11 +1564,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321499249,
-      "real_time": 2.1772655680449562,
-      "cpu_time": 2.1769745751412306,
+      "iterations": 405314911,
+      "real_time": 1.7514220541469183,
+      "cpu_time": 1.7513333724847837,
       "time_unit": "ns",
-      "items_per_second": 2756118545.6705451
+      "items_per_second": 3425961095.8519149
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -1579,11 +1579,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321456664,
-      "real_time": 2.1764217524511413,
-      "cpu_time": 2.1763464514768929,
+      "iterations": 405215226,
+      "real_time": 1.7295967723582044,
+      "cpu_time": 1.7295378555197722,
       "time_unit": "ns",
-      "items_per_second": 13784569997.870359
+      "items_per_second": 17345674108.407532
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -1594,11 +1594,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321503329,
-      "real_time": 2.2016979208324590,
-      "cpu_time": 2.2014987036106244,
+      "iterations": 404890019,
+      "real_time": 1.7292581914694745,
+      "cpu_time": 1.7292499867723323,
       "time_unit": "ns",
-      "items_per_second": 68135402375.658295
+      "items_per_second": 86742808239.066086
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -1609,11 +1609,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321463304,
-      "real_time": 2.1771914781290134,
-      "cpu_time": 2.1770184381605184,
+      "iterations": 405106277,
+      "real_time": 1.7274720282845704,
+      "cpu_time": 1.7273926244297628,
       "time_unit": "ns",
-      "items_per_second": 137803150741.10550
+      "items_per_second": 173672155222.40308
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -1624,11 +1624,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320911053,
-      "real_time": 2.1829070998062985,
-      "cpu_time": 2.1826747862124907,
+      "iterations": 405230366,
+      "real_time": 1.7276356160337651,
+      "cpu_time": 1.7275835123372760,
       "time_unit": "ns",
-      "items_per_second": 687230186317.81177
+      "items_per_second": 868264827308.18921
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -1639,11 +1639,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321533691,
-      "real_time": 2.1766325787613940,
-      "cpu_time": 2.1765615939761656,
+      "iterations": 404700892,
+      "real_time": 1.7275598542540642,
+      "cpu_time": 1.7274933508177188,
       "time_unit": "ns",
-      "items_per_second": 1378320746034.8359
+      "items_per_second": 1736620287759.6797
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -1654,11 +1654,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320936583,
-      "real_time": 2.1766471508796474,
-      "cpu_time": 2.1763991922354333,
+      "iterations": 405215541,
+      "real_time": 1.7280636973397459,
+      "cpu_time": 1.7280209892048521,
       "time_unit": "ns",
-      "items_per_second": 13784235955898.449
+      "items_per_second": 17360900236405.393
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -1669,11 +1669,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321072753,
-      "real_time": 2.1766145070553482,
-      "cpu_time": 2.1764785783613365,
+      "iterations": 404541059,
+      "real_time": 1.7281573834016977,
+      "cpu_time": 1.7280743460949890,
       "time_unit": "ns",
-      "items_per_second": 137837331817834.36
+      "items_per_second": 173603641925432.25
     },
     {
       "name": "PedroCannone/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -1684,11 +1684,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321567920,
-      "real_time": 2.1831325183182990,
-      "cpu_time": 2.1828815262417960,
+      "iterations": 404884913,
+      "real_time": 1.7279116967245745,
+      "cpu_time": 1.7277997636824791,
       "time_unit": "ns",
-      "items_per_second": 1374330197921924.5
+      "items_per_second": 1736312310638396.0
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -1699,9 +1699,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321370195,
-      "real_time": 2.1807555364616524,
-      "cpu_time": 2.1806094028103633,
+      "iterations": 404942804,
+      "real_time": 1.7294462528590568,
+      "cpu_time": 1.7293352742230728,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -1714,11 +1714,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321652345,
-      "real_time": 2.1754778470524538,
-      "cpu_time": 2.1753225862538019,
+      "iterations": 404860517,
+      "real_time": 1.7289555775576635,
+      "cpu_time": 1.7288959594941185,
       "time_unit": "ns",
-      "items_per_second": 1379105802.0348160
+      "items_per_second": 1735211412.5350904
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -1729,11 +1729,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321570093,
-      "real_time": 2.1766705556167083,
-      "cpu_time": 2.1765312360686475,
+      "iterations": 404630635,
+      "real_time": 1.7694850465289298,
+      "cpu_time": 1.7693923397569740,
       "time_unit": "ns",
-      "items_per_second": 2756679941.2617121
+      "items_per_second": 3390994673.8121972
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -1744,11 +1744,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321480167,
-      "real_time": 2.1768802397068998,
-      "cpu_time": 2.1767816737509662,
+      "iterations": 404900457,
+      "real_time": 1.7292654451116336,
+      "cpu_time": 1.7291424074633732,
       "time_unit": "ns",
-      "items_per_second": 13781813932.816185
+      "items_per_second": 17349640995.740520
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -1759,11 +1759,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321859236,
-      "real_time": 2.1762519873749642,
-      "cpu_time": 2.1761637438299246,
+      "iterations": 405234277,
+      "real_time": 1.7314094014806547,
+      "cpu_time": 1.7313549737057401,
       "time_unit": "ns",
-      "items_per_second": 68928636654.890915
+      "items_per_second": 86637346054.428406
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -1774,11 +1774,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321777517,
-      "real_time": 2.1759843525674412,
-      "cpu_time": 2.1759602644954223,
+      "iterations": 404699924,
+      "real_time": 1.7274552020918770,
+      "cpu_time": 1.7273893977800694,
       "time_unit": "ns",
-      "items_per_second": 137870164678.56604
+      "items_per_second": 173672479630.55746
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -1789,11 +1789,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321757574,
-      "real_time": 2.1760314117734869,
-      "cpu_time": 2.1758786663402674,
+      "iterations": 404634945,
+      "real_time": 1.7274042903042732,
+      "cpu_time": 1.7273495248908874,
       "time_unit": "ns",
-      "items_per_second": 689376674905.74487
+      "items_per_second": 868382442803.37610
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -1804,11 +1804,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321306617,
-      "real_time": 2.1755508944279320,
-      "cpu_time": 2.1754884276161661,
+      "iterations": 404720545,
+      "real_time": 1.7282301841137588,
+      "cpu_time": 1.7280563135236924,
       "time_unit": "ns",
-      "items_per_second": 1379000670340.1814
+      "items_per_second": 1736054535099.4248
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -1819,11 +1819,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321216185,
-      "real_time": 2.1763923757453774,
-      "cpu_time": 2.1762708438866496,
+      "iterations": 405204427,
+      "real_time": 1.7289857472361978,
+      "cpu_time": 1.7288232588830998,
       "time_unit": "ns",
-      "items_per_second": 13785048898795.312
+      "items_per_second": 17352843817812.465
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -1834,11 +1834,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321207547,
-      "real_time": 2.1753200431495916,
-      "cpu_time": 2.1751990403886730,
+      "iterations": 405144699,
+      "real_time": 1.7290566055264882,
+      "cpu_time": 1.7288853062347453,
       "time_unit": "ns",
-      "items_per_second": 137918413179510.62
+      "items_per_second": 173522210477544.81
     },
     {
       "name": "PedroPato-WD/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -1849,11 +1849,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320675778,
-      "real_time": 2.1748974941289108,
-      "cpu_time": 2.1747164701663246,
+      "iterations": 405242863,
+      "real_time": 1.7280976987865226,
+      "cpu_time": 1.7279272331071260,
       "time_unit": "ns",
-      "items_per_second": 1379490173158322.8
+      "items_per_second": 1736184222645450.8
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -1864,9 +1864,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321235015,
-      "real_time": 2.1779580846751578,
-      "cpu_time": 2.1777957424722212,
+      "iterations": 404818190,
+      "real_time": 1.7293937063449540,
+      "cpu_time": 1.7292297364404499,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -1879,11 +1879,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321261128,
-      "real_time": 2.1771554727279501,
-      "cpu_time": 2.1770736358741791,
+      "iterations": 405309534,
+      "real_time": 1.7293497591397586,
+      "cpu_time": 1.7292194833985819,
       "time_unit": "ns",
-      "items_per_second": 1377996568.6807761
+      "items_per_second": 1734886767.5859427
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -1894,11 +1894,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321276464,
-      "real_time": 2.1768465429824841,
-      "cpu_time": 2.1767420441977974,
+      "iterations": 405036155,
+      "real_time": 1.7304139799569045,
+      "cpu_time": 1.7302340454026872,
       "time_unit": "ns",
-      "items_per_second": 2756412968.6350603
+      "items_per_second": 3467738954.7051630
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -1909,11 +1909,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321703941,
-      "real_time": 2.1778812743857086,
-      "cpu_time": 2.1777087990351984,
+      "iterations": 403742699,
+      "real_time": 1.7283549937332707,
+      "cpu_time": 1.7282227733856799,
       "time_unit": "ns",
-      "items_per_second": 13775946542.205761
+      "items_per_second": 17358873208.937302
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -1924,11 +1924,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318590378,
-      "real_time": 2.1771555605486475,
-      "cpu_time": 2.1771157570866766,
+      "iterations": 405293687,
+      "real_time": 1.7280812518553326,
+      "cpu_time": 1.7279843270788480,
       "time_unit": "ns",
-      "items_per_second": 68898495411.527222
+      "items_per_second": 86806342887.134003
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -1939,11 +1939,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321499766,
-      "real_time": 2.1774907294957009,
-      "cpu_time": 2.1774106485663798,
+      "iterations": 405364525,
+      "real_time": 1.7286071888012462,
+      "cpu_time": 1.7283684037225522,
       "time_unit": "ns",
-      "items_per_second": 137778328675.63211
+      "items_per_second": 173574105702.15317
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -1954,11 +1954,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321273951,
-      "real_time": 2.1776730009461573,
-      "cpu_time": 2.1775918427946239,
+      "iterations": 405121099,
+      "real_time": 1.7319040028571391,
+      "cpu_time": 1.7317493034348248,
       "time_unit": "ns",
-      "items_per_second": 688834321713.36914
+      "items_per_second": 866176182097.97253
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -1969,11 +1969,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321105099,
-      "real_time": 2.1812393019645282,
-      "cpu_time": 2.1811252396213114,
+      "iterations": 405118011,
+      "real_time": 1.7275772959894884,
+      "cpu_time": 1.7275320128879688,
       "time_unit": "ns",
-      "items_per_second": 1375436836685.6650
+      "items_per_second": 1736581422294.3442
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -1984,11 +1984,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320940019,
-      "real_time": 2.1808965899014119,
-      "cpu_time": 2.1808046038658691,
+      "iterations": 404377918,
+      "real_time": 1.7275602521896365,
+      "cpu_time": 1.7275117802055677,
       "time_unit": "ns",
-      "items_per_second": 13756390621525.465
+      "items_per_second": 17366017612007.316
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -1999,11 +1999,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321180081,
-      "real_time": 2.1764265947738415,
-      "cpu_time": 2.1763257666031905,
+      "iterations": 235472096,
+      "real_time": 2.8751063735381512,
+      "cpu_time": 2.8749014447979455,
       "time_unit": "ns",
-      "items_per_second": 137847010132237.70
+      "items_per_second": 104351403260394.09
     },
     {
       "name": "arsvictorhugo/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -2014,11 +2014,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321665569,
-      "real_time": 2.1758207232929268,
-      "cpu_time": 2.1757338628928586,
+      "iterations": 404359957,
+      "real_time": 1.7350949416586594,
+      "cpu_time": 1.7349449020739680,
       "time_unit": "ns",
-      "items_per_second": 1378845111143876.5
+      "items_per_second": 1729161540757734.8
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -2029,9 +2029,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 168275558,
-      "real_time": 4.1239160056746789,
-      "cpu_time": 4.1237934863956891,
+      "iterations": 199970156,
+      "real_time": 3.3810870908157455,
+      "cpu_time": 3.3806997080104293,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -2044,11 +2044,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 60474649,
-      "real_time": 12.270250266355490,
-      "cpu_time": 12.269235097172706,
+      "iterations": 81251955,
+      "real_time": 9.0609972276977775,
+      "cpu_time": 9.0604998488959421,
       "time_unit": "ns",
-      "items_per_second": 244514020.33133370
+      "items_per_second": 331107560.29266548
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -2059,11 +2059,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 48117917,
-      "real_time": 18.002194296980523,
-      "cpu_time": 18.000950643811123,
+      "iterations": 43572003,
+      "real_time": 18.073423982826490,
+      "cpu_time": 18.072130950693275,
       "time_unit": "ns",
-      "items_per_second": 333315729.74802029
+      "items_per_second": 332002906.37390667
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -2074,11 +2074,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 8804581,
-      "real_time": 89.919388441088529,
-      "cpu_time": 89.911139666952906,
+      "iterations": 8867623,
+      "real_time": 79.753018142518826,
+      "cpu_time": 79.747645564093062,
       "time_unit": "ns",
-      "items_per_second": 333662770.94390547
+      "items_per_second": 376186654.63783556
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -2089,11 +2089,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1892509,
-      "real_time": 382.85842286614570,
-      "cpu_time": 382.83984224117296,
+      "iterations": 1854669,
+      "real_time": 361.54539435336983,
+      "cpu_time": 361.50256406938394,
       "time_unit": "ns",
-      "items_per_second": 391808749.89888412
+      "items_per_second": 414934816.26097178
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -2104,11 +2104,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 843027,
-      "real_time": 825.00285637349691,
-      "cpu_time": 824.96958934885822,
+      "iterations": 963546,
+      "real_time": 725.08952867844732,
+      "cpu_time": 725.02639209752340,
       "time_unit": "ns",
-      "items_per_second": 363649768.27423126
+      "items_per_second": 413778040.73047721
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -2119,11 +2119,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 166726,
-      "real_time": 4213.5726221464984,
-      "cpu_time": 4213.3775295994656,
+      "iterations": 191854,
+      "real_time": 3630.6964983787602,
+      "cpu_time": 3630.3913965828156,
       "time_unit": "ns",
-      "items_per_second": 356008923.82947558
+      "items_per_second": 413178590.44396901
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -2134,11 +2134,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 83066,
-      "real_time": 8507.6622926346281,
-      "cpu_time": 8507.0275202850680,
+      "iterations": 96572,
+      "real_time": 7274.5861222716112,
+      "cpu_time": 7273.8627552499702,
       "time_unit": "ns",
-      "items_per_second": 352649617.37181151
+      "items_per_second": 412435606.90428555
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -2149,11 +2149,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3392,
-      "real_time": 207701.33490566543,
-      "cpu_time": 207687.90890330210,
+      "iterations": 3222,
+      "real_time": 217734.99844816202,
+      "cpu_time": 217712.28398510252,
       "time_unit": "ns",
-      "items_per_second": 144447503.74932885
+      "items_per_second": 137796542.53249586
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -2164,11 +2164,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 317,
-      "real_time": 2202524.2902207379,
-      "cpu_time": 2202473.3312302832,
+      "iterations": 316,
+      "real_time": 2206654.2816456673,
+      "cpu_time": 2206230.9145569610,
       "time_unit": "ns",
-      "items_per_second": 136210502.86789286
+      "items_per_second": 135978513.40970975
     },
     {
       "name": "arthurcdesouza/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -2179,11 +2179,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 35,
-      "real_time": 19974620.942857008,
-      "cpu_time": 19973914.285714298,
+      "iterations": 33,
+      "real_time": 20999183.121211968,
+      "cpu_time": 20996769.181818169,
       "time_unit": "ns",
-      "items_per_second": 150195898.36458114
+      "items_per_second": 142879124.59397823
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -2194,9 +2194,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 218766070,
-      "real_time": 3.1943938061327062,
-      "cpu_time": 3.1940937458903020,
+      "iterations": 266337349,
+      "real_time": 2.6308010409759639,
+      "cpu_time": 2.6306371510816535,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -2209,11 +2209,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 61608695,
-      "real_time": 11.154409552093595,
-      "cpu_time": 11.153098681931180,
+      "iterations": 78010051,
+      "real_time": 9.1342701468045728,
+      "cpu_time": 9.1337389716614847,
       "time_unit": "ns",
-      "items_per_second": 268983543.09912229
+      "items_per_second": 328452565.73544061
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -2224,11 +2224,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 41254663,
-      "real_time": 19.526202771308043,
-      "cpu_time": 19.524552533612990,
+      "iterations": 44156458,
+      "real_time": 17.397379676603130,
+      "cpu_time": 17.396059212901541,
       "time_unit": "ns",
-      "items_per_second": 307305378.17297202
+      "items_per_second": 344905701.14581960
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -2239,11 +2239,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 5280146,
-      "real_time": 131.05548009467537,
-      "cpu_time": 131.03520603407554,
+      "iterations": 5909894,
+      "real_time": 118.00650079341113,
+      "cpu_time": 117.99611905052781,
       "time_unit": "ns",
-      "items_per_second": 228946104.69951513
+      "items_per_second": 254245650.12306485
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -2254,11 +2254,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1020309,
-      "real_time": 683.39826366326349,
-      "cpu_time": 683.32082731799846,
+      "iterations": 1129994,
+      "real_time": 617.59841202695907,
+      "cpu_time": 617.57649332651295,
       "time_unit": "ns",
-      "items_per_second": 219516212.59481120
+      "items_per_second": 242884892.18888539
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -2269,11 +2269,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 509084,
-      "real_time": 1375.2544904180693,
-      "cpu_time": 1375.1135667198344,
+      "iterations": 561986,
+      "real_time": 1246.4676290868767,
+      "cpu_time": 1246.4194588477292,
       "time_unit": "ns",
-      "items_per_second": 218163799.16577613
+      "items_per_second": 240689438.75229567
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -2284,11 +2284,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 101131,
-      "real_time": 6925.0414907396507,
-      "cpu_time": 6923.7306167248398,
+      "iterations": 111626,
+      "real_time": 6278.3757726693329,
+      "cpu_time": 6277.9160948166218,
       "time_unit": "ns",
-      "items_per_second": 216646210.40810379
+      "items_per_second": 238932788.73836479
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -2299,11 +2299,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 50546,
-      "real_time": 13944.299885253129,
-      "cpu_time": 13942.821113441225,
+      "iterations": 55690,
+      "real_time": 12566.773639791380,
+      "cpu_time": 12566.005710181373,
       "time_unit": "ns",
-      "items_per_second": 215164490.42783216
+      "items_per_second": 238739347.18725348
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -2314,11 +2314,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3787,
-      "real_time": 184227.19778189040,
-      "cpu_time": 184211.42144177461,
+      "iterations": 3743,
+      "real_time": 181994.77905423983,
+      "cpu_time": 181984.71920919034,
       "time_unit": "ns",
-      "items_per_second": 162856351.49654588
+      "items_per_second": 164849005.62181365
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -2329,11 +2329,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 384,
-      "real_time": 1823877.6458333975,
-      "cpu_time": 1823824.6744791686,
+      "iterations": 390,
+      "real_time": 1787906.5102562937,
+      "cpu_time": 1787681.1538461570,
       "time_unit": "ns",
-      "items_per_second": 164489495.17895478
+      "items_per_second": 167815160.63675928
     },
     {
       "name": "bernardobrust/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -2344,11 +2344,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 56,
-      "real_time": 12521823.196428677,
-      "cpu_time": 12520546.267857131,
+      "iterations": 58,
+      "real_time": 12081150.103447389,
+      "cpu_time": 12079970.137931043,
       "time_unit": "ns",
-      "items_per_second": 239606159.01413420
+      "items_per_second": 248344984.77608117
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -2359,9 +2359,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 204469290,
-      "real_time": 3.4235381068716717,
-      "cpu_time": 3.4231260009755009,
+      "iterations": 221270410,
+      "real_time": 3.1664844386557998,
+      "cpu_time": 3.1662118671900141,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -2374,11 +2374,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 48961658,
-      "real_time": 14.981384474357570,
-      "cpu_time": 14.980495472600216,
+      "iterations": 68435865,
+      "real_time": 10.133036179202058,
+      "cpu_time": 10.132606492224509,
       "time_unit": "ns",
-      "items_per_second": 200260398.96257716
+      "items_per_second": 296073868.28868955
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -2389,11 +2389,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 43205222,
-      "real_time": 18.301293764906735,
-      "cpu_time": 18.299332265900635,
+      "iterations": 51217007,
+      "real_time": 15.657013733738895,
+      "cpu_time": 15.655977417813581,
       "time_unit": "ns",
-      "items_per_second": 327880816.24052083
+      "items_per_second": 383240205.31436890
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -2404,11 +2404,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 11088157,
-      "real_time": 61.898681899977028,
-      "cpu_time": 61.890918301391309,
+      "iterations": 11632799,
+      "real_time": 58.135124745127968,
+      "cpu_time": 58.130503415386087,
       "time_unit": "ns",
-      "items_per_second": 484723782.15344077
+      "items_per_second": 516080168.54124725
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -2419,11 +2419,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2142595,
-      "real_time": 321.30655116809402,
-      "cpu_time": 321.26856032054576,
+      "iterations": 2508351,
+      "real_time": 275.15476422557742,
+      "cpu_time": 275.12484616387428,
       "time_unit": "ns",
-      "items_per_second": 466899094.79576051
+      "items_per_second": 545207029.06873989
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -2434,11 +2434,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1023060,
-      "real_time": 685.99518796552275,
-      "cpu_time": 685.91125544933868,
+      "iterations": 1245473,
+      "real_time": 548.52077403524675,
+      "cpu_time": 548.44326693553387,
       "time_unit": "ns",
-      "items_per_second": 437374365.29375911
+      "items_per_second": 547002795.15923595
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -2449,11 +2449,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 201666,
-      "real_time": 3542.5816151457771,
-      "cpu_time": 3542.1312516735593,
+      "iterations": 260036,
+      "real_time": 2697.7615368640982,
+      "cpu_time": 2697.5357219769553,
       "time_unit": "ns",
-      "items_per_second": 423473861.75802815
+      "items_per_second": 556063071.85459185
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -2464,11 +2464,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 98110,
-      "real_time": 7043.4418407909052,
-      "cpu_time": 7042.8586484558145,
+      "iterations": 128619,
+      "real_time": 5421.8988252124336,
+      "cpu_time": 5421.6669776627077,
       "time_unit": "ns",
-      "items_per_second": 425963397.78276908
+      "items_per_second": 553335350.98338091
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -2479,11 +2479,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3410,
-      "real_time": 206471.48445747627,
-      "cpu_time": 206458.11319648111,
+      "iterations": 3182,
+      "real_time": 220797.77089880526,
+      "cpu_time": 220790.73475801368,
       "time_unit": "ns",
-      "items_per_second": 145307924.86439967
+      "items_per_second": 135875266.83526805
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -2494,11 +2494,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 334,
-      "real_time": 2098202.9880239265,
-      "cpu_time": 2097884.8443113756,
+      "iterations": 309,
+      "real_time": 2262868.3786407709,
+      "cpu_time": 2262632.1553398008,
       "time_unit": "ns",
-      "items_per_second": 143001176.07192788
+      "items_per_second": 132588940.40376890
     },
     {
       "name": "caua07/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -2509,11 +2509,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 37,
-      "real_time": 18765330.108107962,
-      "cpu_time": 18762595.810810838,
+      "iterations": 34,
+      "real_time": 20682954.647058107,
+      "cpu_time": 20680580.941176478,
       "time_unit": "ns",
-      "items_per_second": 159892587.90467718
+      "items_per_second": 145063623.14159131
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -2524,9 +2524,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 248570622,
-      "real_time": 2.8024369468731245,
-      "cpu_time": 2.8020867526332216,
+      "iterations": 256018922,
+      "real_time": 2.6614519609609615,
+      "cpu_time": 2.6608985409289403,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -2539,11 +2539,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 102353306,
-      "real_time": 7.3938920448742120,
-      "cpu_time": 7.3932612103413655,
+      "iterations": 114291310,
+      "real_time": 6.9206139819376027,
+      "cpu_time": 6.9204010261147610,
       "time_unit": "ns",
-      "items_per_second": 405774923.22383159
+      "items_per_second": 433500889.42522663
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -2554,11 +2554,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 59139040,
-      "real_time": 12.479223758113431,
-      "cpu_time": 12.477778553726948,
+      "iterations": 60822431,
+      "real_time": 11.339426534924163,
+      "cpu_time": 11.338243616076443,
       "time_unit": "ns",
-      "items_per_second": 480854823.16945589
+      "items_per_second": 529182490.97176099
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -2569,11 +2569,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 13527437,
-      "real_time": 52.888436294323931,
-      "cpu_time": 52.885016208170107,
+      "iterations": 10000000,
+      "real_time": 50.101786400000492,
+      "cpu_time": 50.099938100000017,
       "time_unit": "ns",
-      "items_per_second": 567268427.82673395
+      "items_per_second": 598803135.04818463
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -2584,11 +2584,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2180448,
-      "real_time": 314.37313937317572,
-      "cpu_time": 314.34509697089766,
+      "iterations": 3040018,
+      "real_time": 230.73229369035948,
+      "cpu_time": 230.72097961262057,
       "time_unit": "ns",
-      "items_per_second": 477182566.05696994
+      "items_per_second": 650135935.84705341
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -2599,11 +2599,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1036317,
-      "real_time": 568.72315999834666,
-      "cpu_time": 568.62328515309537,
+      "iterations": 1501775,
+      "real_time": 463.74713588918712,
+      "cpu_time": 463.72271145810788,
       "time_unit": "ns",
-      "items_per_second": 527590072.07949352
+      "items_per_second": 646938337.47476828
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -2614,11 +2614,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 195433,
-      "real_time": 3502.6603951225902,
-      "cpu_time": 3502.6036390988215,
+      "iterations": 294529,
+      "real_time": 2309.9338842694115,
+      "cpu_time": 2309.8229919634400,
       "time_unit": "ns",
-      "items_per_second": 428252852.60821921
+      "items_per_second": 649400410.86219394
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -2629,11 +2629,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 99750,
-      "real_time": 7076.4511077695288,
-      "cpu_time": 7075.5377142857151,
+      "iterations": 151312,
+      "real_time": 4604.3192740830227,
+      "cpu_time": 4604.3288833668184,
       "time_unit": "ns",
-      "items_per_second": 423996043.99576777
+      "items_per_second": 651560754.23663330
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -2644,11 +2644,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3887,
-      "real_time": 182550.69616671131,
-      "cpu_time": 182546.32956007216,
+      "iterations": 3810,
+      "real_time": 183619.44855642438,
+      "cpu_time": 183608.83753280857,
       "time_unit": "ns",
-      "items_per_second": 164341841.72477502
+      "items_per_second": 163390828.04028636
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -2659,11 +2659,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 390,
-      "real_time": 1775824.0743590319,
-      "cpu_time": 1775496.1769230776,
+      "iterations": 339,
+      "real_time": 2065115.8082594741,
+      "cpu_time": 2064997.9911504432,
       "time_unit": "ns",
-      "items_per_second": 168966852.13926953
+      "items_per_second": 145278591.69144529
     },
     {
       "name": "fabbri-priv/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -2674,11 +2674,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 42,
-      "real_time": 16914906.880952600,
-      "cpu_time": 16913619.309523780,
+      "iterations": 37,
+      "real_time": 19008923.135134939,
+      "cpu_time": 19007093.891891859,
       "time_unit": "ns",
-      "items_per_second": 177371853.12612244
+      "items_per_second": 157835806.83419231
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -2689,9 +2689,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 317101508,
-      "real_time": 2.1762925296463154,
-      "cpu_time": 2.1762046524231602,
+      "iterations": 405224656,
+      "real_time": 1.7287340259965920,
+      "cpu_time": 1.7286003223851218,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -2704,11 +2704,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321200687,
-      "real_time": 2.1750782401035336,
-      "cpu_time": 2.1748794951985895,
+      "iterations": 405147724,
+      "real_time": 1.7280459633039065,
+      "cpu_time": 1.7279077964164993,
       "time_unit": "ns",
-      "items_per_second": 1379386769.0706553
+      "items_per_second": 1736203752.4349895
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -2719,11 +2719,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321849289,
-      "real_time": 2.1760540816357716,
-      "cpu_time": 2.1757296596047468,
+      "iterations": 404938079,
+      "real_time": 1.7279852508017255,
+      "cpu_time": 1.7279508035597706,
       "time_unit": "ns",
-      "items_per_second": 2757695549.8644018
+      "items_per_second": 3472321079.7664685
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -2734,11 +2734,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321775430,
-      "real_time": 2.1901423455481659,
-      "cpu_time": 2.1900064961454637,
+      "iterations": 404790190,
+      "real_time": 1.7273854561543571,
+      "cpu_time": 1.7273346372351561,
       "time_unit": "ns",
-      "items_per_second": 13698589503.182619
+      "items_per_second": 17367798545.404758
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -2749,11 +2749,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321887263,
-      "real_time": 2.1763898592035447,
-      "cpu_time": 2.1761515086727745,
+      "iterations": 404681146,
+      "real_time": 1.7318280180021361,
+      "cpu_time": 1.7317302644981649,
       "time_unit": "ns",
-      "items_per_second": 68929024198.082764
+      "items_per_second": 86618570498.603745
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -2764,11 +2764,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 322045706,
-      "real_time": 2.1756249996391577,
-      "cpu_time": 2.1754570731646390,
+      "iterations": 405250408,
+      "real_time": 1.7337467874924315,
+      "cpu_time": 1.7335747629895033,
       "time_unit": "ns",
-      "items_per_second": 137902054561.61441
+      "items_per_second": 173052819183.09540
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -2779,11 +2779,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321513952,
-      "real_time": 2.1769539444434489,
-      "cpu_time": 2.1766362599405946,
+      "iterations": 404787559,
+      "real_time": 1.7284679492831239,
+      "cpu_time": 1.7282769206847080,
       "time_unit": "ns",
-      "items_per_second": 689136732492.42773
+      "items_per_second": 867916467579.58826
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -2794,11 +2794,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321932127,
-      "real_time": 2.1760494347928767,
-      "cpu_time": 2.1759712909920306,
+      "iterations": 405155127,
+      "real_time": 1.7277592343043600,
+      "cpu_time": 1.7276132359050689,
       "time_unit": "ns",
-      "items_per_second": 1378694660365.8052
+      "items_per_second": 1736499777641.6943
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -2809,11 +2809,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321974037,
-      "real_time": 2.1755891019250138,
-      "cpu_time": 2.1753638881137496,
+      "iterations": 405206207,
+      "real_time": 1.7279086250522211,
+      "cpu_time": 1.7278097223224438,
       "time_unit": "ns",
-      "items_per_second": 13790796180777.320
+      "items_per_second": 17363023029917.527
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -2824,11 +2824,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321932068,
-      "real_time": 2.1771143997994997,
-      "cpu_time": 2.1769646787719190,
+      "iterations": 243522302,
+      "real_time": 2.8756152034074831,
+      "cpu_time": 2.8754369486865285,
       "time_unit": "ns",
-      "items_per_second": 137806553742175.38
+      "items_per_second": 104331969489728.19
     },
     {
       "name": "fabbri/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -2839,11 +2839,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321845471,
-      "real_time": 2.1763838335945334,
-      "cpu_time": 2.1762153676538749,
+      "iterations": 405251487,
+      "real_time": 1.7283641552682527,
+      "cpu_time": 1.7282847773979879,
       "time_unit": "ns",
-      "items_per_second": 1378540030821594.2
+      "items_per_second": 1735825044132274.2
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -2854,9 +2854,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 320937332,
-      "real_time": 2.1781771495501991,
-      "cpu_time": 2.1779927958022660,
+      "iterations": 404557023,
+      "real_time": 1.7283776803943798,
+      "cpu_time": 1.7282895840372055,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -2869,11 +2869,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321666799,
-      "real_time": 2.1775274388825059,
-      "cpu_time": 2.1774186182018744,
+      "iterations": 404506276,
+      "real_time": 1.7282010848207146,
+      "cpu_time": 1.7280664441409066,
       "time_unit": "ns",
-      "items_per_second": 1377778243.8901978
+      "items_per_second": 1736044357.6528242
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -2884,11 +2884,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321738149,
-      "real_time": 2.1772831576774059,
-      "cpu_time": 2.1770013508718224,
+      "iterations": 404895169,
+      "real_time": 1.7330123170720166,
+      "cpu_time": 1.7327948089200338,
       "time_unit": "ns",
-      "items_per_second": 2756084647.1671605
+      "items_per_second": 3462614251.3316431
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -2899,11 +2899,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318449182,
-      "real_time": 2.2043558931169476,
-      "cpu_time": 2.2040908963616053,
+      "iterations": 404846143,
+      "real_time": 1.7804759449072665,
+      "cpu_time": 1.7803665971939364,
       "time_unit": "ns",
-      "items_per_second": 13611053904.139065
+      "items_per_second": 16850462172.949924
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -2914,11 +2914,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321597730,
-      "real_time": 2.1782403998932955,
-      "cpu_time": 2.1781033933292990,
+      "iterations": 404999499,
+      "real_time": 1.7291506624801987,
+      "cpu_time": 1.7290771093027950,
       "time_unit": "ns",
-      "items_per_second": 68867254171.401077
+      "items_per_second": 86751481002.766586
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -2929,11 +2929,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321393613,
-      "real_time": 2.1776958492327809,
-      "cpu_time": 2.1775108642249230,
+      "iterations": 405311860,
+      "real_time": 1.7286532548047377,
+      "cpu_time": 1.7285993210265300,
       "time_unit": "ns",
-      "items_per_second": 137771987698.80026
+      "items_per_second": 173550918567.89853
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -2944,11 +2944,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321641136,
-      "real_time": 2.1785171968799273,
-      "cpu_time": 2.1782981173154434,
+      "iterations": 405093345,
+      "real_time": 1.7281361114436231,
+      "cpu_time": 1.7280877719677168,
       "time_unit": "ns",
-      "items_per_second": 688610979404.69934
+      "items_per_second": 868011465813.45178
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -2959,11 +2959,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321738194,
-      "real_time": 2.1770351610788801,
-      "cpu_time": 2.1769630900582482,
+      "iterations": 404055071,
+      "real_time": 1.7281192122446705,
+      "cpu_time": 1.7280270045169155,
       "time_unit": "ns",
-      "items_per_second": 1378066543112.4651
+      "items_per_second": 1736083980260.8726
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -2974,11 +2974,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321748075,
-      "real_time": 2.1774836725908466,
-      "cpu_time": 2.1773898134433289,
+      "iterations": 405195873,
+      "real_time": 1.7277028904981193,
+      "cpu_time": 1.7276066086684956,
       "time_unit": "ns",
-      "items_per_second": 13777964705620.596
+      "items_per_second": 17365064389931.721
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -2989,11 +2989,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321614945,
-      "real_time": 2.1825558666124283,
-      "cpu_time": 2.1823237349868760,
+      "iterations": 404375045,
+      "real_time": 1.7275875987846963,
+      "cpu_time": 1.7274907827212749,
       "time_unit": "ns",
-      "items_per_second": 137468146998733.05
+      "items_per_second": 173662286942809.16
     },
     {
       "name": "gabriellefoliv/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -3004,11 +3004,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 321255649,
-      "real_time": 2.1769021966675370,
-      "cpu_time": 2.1767735545718030,
+      "iterations": 404720954,
+      "real_time": 1.7278380525857253,
+      "cpu_time": 1.7277428314225574,
       "time_unit": "ns",
-      "items_per_second": 1378186533780329.5
+      "items_per_second": 1736369525278200.8
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -3019,9 +3019,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 173107035,
-      "real_time": 4.0447440047712764,
-      "cpu_time": 4.0445495297172638,
+      "iterations": 207718827,
+      "real_time": 3.4442103892681719,
+      "cpu_time": 3.4441904729223221,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -3034,11 +3034,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 67400755,
-      "real_time": 11.902437962304957,
-      "cpu_time": 11.901330793698081,
+      "iterations": 78651289,
+      "real_time": 8.7956944100429926,
+      "cpu_time": 8.7949078622220682,
       "time_unit": "ns",
-      "items_per_second": 252072650.69789857
+      "items_per_second": 341106472.85872060
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -3049,11 +3049,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 47898754,
-      "real_time": 18.781558221743779,
-      "cpu_time": 18.780461784037225,
+      "iterations": 43667168,
+      "real_time": 18.010597069175923,
+      "cpu_time": 18.010017801017007,
       "time_unit": "ns",
-      "items_per_second": 319480962.12947237
+      "items_per_second": 333147921.68951583
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -3064,11 +3064,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 8765683,
-      "real_time": 88.664402876539526,
-      "cpu_time": 88.657113541523273,
+      "iterations": 8994913,
+      "real_time": 78.971738692744168,
+      "cpu_time": 78.967910973680361,
       "time_unit": "ns",
-      "items_per_second": 338382322.65422511
+      "items_per_second": 379901147.56864798
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -3079,11 +3079,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1890955,
-      "real_time": 376.22739515219712,
-      "cpu_time": 376.19899574553597,
+      "iterations": 1916835,
+      "real_time": 359.90459116199446,
+      "cpu_time": 359.89796304846237,
       "time_unit": "ns",
-      "items_per_second": 398725147.31926930
+      "items_per_second": 416784798.47300947
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -3094,11 +3094,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 843675,
-      "real_time": 820.21015201349451,
-      "cpu_time": 820.12842030402760,
+      "iterations": 964351,
+      "real_time": 715.22151374343639,
+      "cpu_time": 715.16130019049069,
       "time_unit": "ns",
-      "items_per_second": 365796371.12049824
+      "items_per_second": 419485785.82215214
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -3109,11 +3109,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 166866,
-      "real_time": 4284.5455694987222,
-      "cpu_time": 4284.2613354428104,
+      "iterations": 191719,
+      "real_time": 3628.5428726416990,
+      "cpu_time": 3628.2574966487382,
       "time_unit": "ns",
-      "items_per_second": 350118697.84665310
+      "items_per_second": 413421594.63199186
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -3124,11 +3124,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 82967,
-      "real_time": 8453.2811599791476,
-      "cpu_time": 8452.3589740499265,
+      "iterations": 96211,
+      "real_time": 7244.8574279445857,
+      "cpu_time": 7244.3238610969665,
       "time_unit": "ns",
-      "items_per_second": 354930500.37397522
+      "items_per_second": 414117322.40608680
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -3139,11 +3139,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3393,
-      "real_time": 210495.47833775773,
-      "cpu_time": 210469.12378426149,
+      "iterations": 3203,
+      "real_time": 218022.82079301425,
+      "cpu_time": 218007.72713081486,
       "time_unit": "ns",
-      "items_per_second": 142538722.35792217
+      "items_per_second": 137609801.24341461
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -3154,11 +3154,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 318,
-      "real_time": 2212694.1981131788,
-      "cpu_time": 2212524.7106918204,
+      "iterations": 317,
+      "real_time": 2220795.2586749792,
+      "cpu_time": 2220731.5394321787,
       "time_unit": "ns",
-      "items_per_second": 135591705.95938557
+      "items_per_second": 135090619.76789293
     },
     {
       "name": "iprjnapster/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -3169,11 +3169,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 35,
-      "real_time": 19969754.714286737,
-      "cpu_time": 19968241.228571415,
+      "iterations": 33,
+      "real_time": 21368345.969697412,
+      "cpu_time": 21367082.606060565,
       "time_unit": "ns",
-      "items_per_second": 150238569.61961535
+      "items_per_second": 140402883.03790614
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -3184,9 +3184,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 168981186,
-      "real_time": 4.0747721938701709,
-      "cpu_time": 4.0743709184287527,
+      "iterations": 204787658,
+      "real_time": 3.3725220882206686,
+      "cpu_time": 3.3724129459012619,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -3199,11 +3199,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 65947690,
-      "real_time": 11.993274108615594,
-      "cpu_time": 11.991162101356389,
+      "iterations": 79008068,
+      "real_time": 8.5527862926605458,
+      "cpu_time": 8.5525548859136755,
       "time_unit": "ns",
-      "items_per_second": 250184258.59330618
+      "items_per_second": 350772376.21018875
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -3214,11 +3214,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 48016675,
-      "real_time": 18.525486718936566,
-      "cpu_time": 18.524560457382773,
+      "iterations": 46489689,
+      "real_time": 17.502773206334513,
+      "cpu_time": 17.502035623426092,
       "time_unit": "ns",
-      "items_per_second": 323894324.71574581
+      "items_per_second": 342817265.89386731
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -3229,11 +3229,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 8785999,
-      "real_time": 89.686383301433608,
-      "cpu_time": 89.673869414280603,
+      "iterations": 8991120,
+      "real_time": 77.287191807027483,
+      "cpu_time": 77.285541623290570,
       "time_unit": "ns",
-      "items_per_second": 334545617.31248862
+      "items_per_second": 388170922.65753466
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -3244,11 +3244,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1890172,
-      "real_time": 377.20173402208707,
-      "cpu_time": 377.18061319287341,
+      "iterations": 1906388,
+      "real_time": 361.16751049629130,
+      "cpu_time": 361.15527898832772,
       "time_unit": "ns",
-      "items_per_second": 397687459.94189441
+      "items_per_second": 415333815.47178739
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -3259,11 +3259,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 842088,
-      "real_time": 822.36370901854548,
-      "cpu_time": 822.23783025052057,
+      "iterations": 966980,
+      "real_time": 723.38798734204897,
+      "cpu_time": 723.33028501106492,
       "time_unit": "ns",
-      "items_per_second": 364857938.86252546
+      "items_per_second": 414748291.64025789
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -3274,11 +3274,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 165541,
-      "real_time": 4215.1789888909398,
-      "cpu_time": 4214.8144024743124,
+      "iterations": 192852,
+      "real_time": 3620.0571993031567,
+      "cpu_time": 3619.9284269802724,
       "time_unit": "ns",
-      "items_per_second": 355887556.78528172
+      "items_per_second": 414372833.67817664
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -3289,11 +3289,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 83152,
-      "real_time": 8448.8816865497010,
-      "cpu_time": 8447.8366605734100,
+      "iterations": 97119,
+      "real_time": 7219.8243803991472,
+      "cpu_time": 7219.2357726088567,
       "time_unit": "ns",
-      "items_per_second": 355120502.50701344
+      "items_per_second": 415556451.47129929
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -3304,11 +3304,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3391,
-      "real_time": 208847.92892951291,
-      "cpu_time": 208824.08787968158,
+      "iterations": 3201,
+      "real_time": 218289.42174321259,
+      "cpu_time": 218276.39237738212,
       "time_unit": "ns",
-      "items_per_second": 143661587.62912989
+      "items_per_second": 137440424.37778816
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -3319,11 +3319,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 319,
-      "real_time": 2203638.4764890168,
-      "cpu_time": 2203250.7993730386,
+      "iterations": 314,
+      "real_time": 2220393.3121019122,
+      "cpu_time": 2220221.8885350325,
       "time_unit": "ns",
-      "items_per_second": 136162437.83293697
+      "items_per_second": 135121629.75654149
     },
     {
       "name": "ogcelio/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -3334,11 +3334,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 35,
-      "real_time": 19945628.799999733,
-      "cpu_time": 19942747.942857154,
+      "iterations": 33,
+      "real_time": 21463575.969696853,
+      "cpu_time": 21462411.151515123,
       "time_unit": "ns",
-      "items_per_second": 150430623.13157815
+      "items_per_second": 139779262.39607134
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/0",
@@ -3349,9 +3349,9 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 106955106,
-      "real_time": 6.5306833224022860,
-      "cpu_time": 6.5304104041559272,
+      "iterations": 138049893,
+      "real_time": 5.1104188758769737,
+      "cpu_time": 5.1102555870869093,
       "time_unit": "ns",
       "items_per_second": 0E-16
     },
@@ -3364,11 +3364,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 75008292,
-      "real_time": 9.6469877623666687,
-      "cpu_time": 9.6459991649989867,
+      "iterations": 84687901,
+      "real_time": 8.4759309715323852,
+      "cpu_time": 8.4753893711452370,
       "time_unit": "ns",
-      "items_per_second": 311009771.89440960
+      "items_per_second": 353966038.44698936
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/2",
@@ -3379,11 +3379,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 45895453,
-      "real_time": 17.163360845353729,
-      "cpu_time": 17.161528136567256,
+      "iterations": 49437917,
+      "real_time": 14.104464352735645,
+      "cpu_time": 14.084042396041884,
       "time_unit": "ns",
-      "items_per_second": 349619215.27345717
+      "items_per_second": 426014054.15296203
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/10",
@@ -3394,11 +3394,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 10403492,
-      "real_time": 68.054817939981135,
-      "cpu_time": 68.049498860574943,
+      "iterations": 12118219,
+      "real_time": 58.156431072912490,
+      "cpu_time": 58.153490459282814,
       "time_unit": "ns",
-      "items_per_second": 440855561.05955040
+      "items_per_second": 515876171.19913077
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/50",
@@ -3409,11 +3409,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2320067,
-      "real_time": 304.10268410353967,
-      "cpu_time": 304.08586131348790,
+      "iterations": 2607746,
+      "real_time": 272.93748394207734,
+      "cpu_time": 272.92241115507409,
       "time_unit": "ns",
-      "items_per_second": 493281730.86404091
+      "items_per_second": 549606752.20903802
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/100",
@@ -3424,11 +3424,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1078307,
-      "real_time": 642.73786778717010,
-      "cpu_time": 642.68720039840207,
+      "iterations": 1303322,
+      "real_time": 540.12342920629055,
+      "cpu_time": 540.10522879227040,
       "time_unit": "ns",
-      "items_per_second": 466790064.92432064
+      "items_per_second": 555447316.57353175
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/500",
@@ -3439,11 +3439,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 203558,
-      "real_time": 3304.3564831647559,
-      "cpu_time": 3303.4200326196956,
+      "iterations": 256713,
+      "real_time": 2726.1771472423566,
+      "cpu_time": 2725.8939048665234,
       "time_unit": "ns",
-      "items_per_second": 454074863.38044095
+      "items_per_second": 550278203.16926432
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000",
@@ -3454,11 +3454,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 101602,
-      "real_time": 6887.7391094660643,
-      "cpu_time": 6886.9946556170162,
+      "iterations": 129020,
+      "real_time": 5537.4651526895159,
+      "cpu_time": 5537.0928383196442,
       "time_unit": "ns",
-      "items_per_second": 435603648.61808145
+      "items_per_second": 541800559.89641273
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/10000",
@@ -3469,11 +3469,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 3736,
-      "real_time": 187075.96359743277,
-      "cpu_time": 187051.36215203418,
+      "iterations": 4066,
+      "real_time": 169329.04476144031,
+      "cpu_time": 169315.58755533697,
       "time_unit": "ns",
-      "items_per_second": 160383755.85640579
+      "items_per_second": 177183922.83401066
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/100000",
@@ -3484,11 +3484,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 354,
-      "real_time": 2023429.8276836970,
-      "cpu_time": 2023228.4604519766,
+      "iterations": 345,
+      "real_time": 2029992.6347826077,
+      "cpu_time": 2029893.8318840584,
       "time_unit": "ns",
-      "items_per_second": 148277866.71851277
+      "items_per_second": 147790980.63545185
     },
     {
       "name": "ramonschautz/sorted_merge_3way_fixture/BM_sorted_merge_3way/1000000",
@@ -3499,11 +3499,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 39,
-      "real_time": 18058527.076923326,
-      "cpu_time": 18057576.205128212,
+      "iterations": 35,
+      "real_time": 19856398.514285240,
+      "cpu_time": 19854564.599999998,
       "time_unit": "ns",
-      "items_per_second": 166135253.47593570
+      "items_per_second": 151098755.39652985
     }
   ]
 }
